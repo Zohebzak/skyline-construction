@@ -1,6 +1,10 @@
 .mainDiv {
     display: flex;
     justify-content: center;
+    //  background-image: linear-gradient(#C04848, #480048);
+
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 62%);
 
     .navUL {
         list-style: none;
@@ -8,6 +12,7 @@
         display: flex;
         width: 65%;
         align-items: center;
+        height: 87px;
 
         li {
             display: inline-block;
@@ -17,6 +22,7 @@
 
         li a {
             text-decoration: none;
+            color: black;
         }
     }
 }

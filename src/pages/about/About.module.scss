@@ -1,0 +1,29 @@
+.header::first-letter {
+    color: rgb(38, 121, 209);
+    font-size: 200%;
+    font-variant: small-caps;
+    margin: 0.5rem;
+}
+
+.AboutUS {
+    text-indent: 30px;
+    background-color: rgb(220, 157, 157);
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 5rem;
+        max-width: 100%;
+    }
+}
+
+.img2 {
+    width: 77.4rem;
+    height: 30rem;
+}
+
+.backgroundText {
+    display: flex;
+    align-items: center;
+}
+
