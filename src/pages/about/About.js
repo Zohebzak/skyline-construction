@@ -5,6 +5,7 @@ import img3 from '../../images/construction-background.jpg'
 import Info from '../home/slideshow/info/Info'
 
 
+
 function About() {
   return (
     <>

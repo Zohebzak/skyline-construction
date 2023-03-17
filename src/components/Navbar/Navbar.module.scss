@@ -3,8 +3,9 @@
     justify-content: center;
     //  background-image: linear-gradient(#C04848, #480048);
 
-    background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 62%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 62%);
+    height: 5.2rem;
 
     .navUL {
         list-style: none;
@@ -14,15 +15,63 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,
         align-items: center;
         height: 87px;
 
-        li {
-            display: inline-block;
-            float: right;
+        li:nth-child(3) div {
+            position: absolute;
+            background-color: #a02a2a;
+            width: 205px;
+            // display: none;
 
+        }
+
+        li:nth-child(3):hover div {
+            position: absolute;
+            background-color: #5aaeea;
+            width: 140px;
+            display: block;
+            z-index: 1;
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        // .li:nth-child(3) :hover div {
+        //     display: block;
+
+        // }
+
+        .content a {
+            display: block;
+            color: #1abc9c;
+            text-decoration: none;
+            padding: 10px;
+
+        }
+
+        i {
+            font-size: 25px;
         }
 
         li a {
             text-decoration: none;
             color: black;
+            font-weight: bold;
+            left: 0;
+            width: 0;
+            height: 2px;
+            transition: 0.3s ease;
+         
+        } 
+       
+        li a:hover {
+            border-bottom: 3px solid rgb(216, 0, 0);
+            color: rgb(61, 57, 57);
+         
+        }
+
+        li {
+            display: inline-block;
+            float: right;
+
         }
     }
+
 }
