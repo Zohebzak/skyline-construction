@@ -1,30 +1,80 @@
-.header::first-letter {
-    color: rgb(38, 121, 209);
-    font-size: 200%;
-    font-variant: small-caps;
-    margin: 0.5rem;
+
+.heading{
+    text-align: center;
+}
+//aboutUs & aside image css
+.mainAbout2 img {
+    width: 70.3rem;
 }
 
-.AboutUS {
-    text-indent: 30px;
-    background-color: rgb(220, 157, 157);
+.mainAbout3 {
+    margin: 3rem;
+}
+
+.paraImg {
     display: flex;
     align-items: center;
+    margin: 3rem;
+    flex-direction: row-reverse;
+    padding-left: 15px;
+    padding-right: 15px;
 
-    img {
-        margin-right: 5rem;
-        max-width: 100%;
-    }
 }
 
-.img2 {
-    width: 77.4rem;
-    height: 30rem;
+.paraImg img {
+    width: 30rem;
+    height: 25rem;
 }
 
-.backgroundText {
+.para {
+    padding: 30px 35px 20px 0;
+}
+
+.para p {
+    font-size: medium;
+}
+
+.para h3 {
+    display: table;
+    border-bottom: 2px solid rgb(55, 191, 241);
+}
+
+//sub main information
+
+.aboutSubContent1 {
+    background-image: url('../../images/blue-background.jpg');
+    background-size: 100%;
+    background-position: center;
+}
+
+.aboutSubContent2 {
     display: flex;
     align-items: center;
+    margin: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
+.aboutSubContent2 img {
+    height: 25rem;
+    width: 25rem;
+
+}
+
+.aboutSubContent3 {
+    color: white;
+    margin: 3rem;
+}
+.surveyer1{
+    height: 90vh;
+    width: 100%;
+    background-image: url('../../images/surveyer-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.surveyerText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 

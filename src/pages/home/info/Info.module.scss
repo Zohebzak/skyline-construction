@@ -1,0 +1,32 @@
+.main {
+    .container {
+        background-image: url('../../../images/Artificial\ Intelligence\ Design\ GIF\ by\ xponentialdesign\ -\ Find\ &\ Share\ on\ GIPHY.gif');
+        backdrop-filter: blur(5px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 20px;
+    }
+
+    .row {
+        margin: 5px;
+
+    }
+
+    .imgP {
+        margin: 5px;
+        display: flex;
+        align-items: center;
+       margin-left: 6rem;
+    }
+    .imgP img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .imgP p{
+        width: 40rem;
+        padding: 5rem;
+        font-weight:bold;
+        color: white;
+       
+    }
+}

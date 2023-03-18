@@ -1,5 +1,4 @@
 import React from 'react'
-import Info from './slideshow/info/Info'
 import SlideShow from './slideshow/SlideShow'
 
 function Home() {

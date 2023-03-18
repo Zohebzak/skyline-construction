@@ -2,30 +2,59 @@ import React from 'react'
 import style from './About.module.scss'
 import sideimg from '../../images/company-pic.jpg'
 import img3 from '../../images/construction-background.jpg'
-import Info from '../home/slideshow/info/Info'
+import imgAbout from '../../images/about.jpeg'
+import asideImg from '../../images/about-aside-image.jpg'
+import asideImg2 from '../../images/aside-image2.jpg'
+import 'animate.css';
 
 
 
 function About() {
   return (
     <>
-      <h2>About Us</h2>
-      <div className={style.AboutUS}>
-        <img src={sideimg} alt="compant image" />
-        <p className={style.header}><i>Skyline Contractors And Engineers Private Limited is a newly incorporated company. The company is having following credentials:</i><br />
-          The company is promoted by Shri. Iraj Siddiqui Ifteqaroddin Siddiqui & Shri. Meraj Siddiqui Ifteqaroddin Siddiqui. Both the promoter/directors are experienced civil contractors and have in-depth knowledge of the field of civil construction. Shri. Iraj Siddiqui Ifteqaroddin Siddiqui is the Chairman and Managing Director of the company. He is the proprietor of Skyline Construction, a sole proprietorship entity. He is a young and dynamic entrepreneur. He started the work of contractorship in the year 2014. He is a Graduate (B.Tech) from Marathwada Agricultural University. He started his contractorship business with sub contracts from various entities and gradually gained experience and expertise.
+      <div className={style.mainAbout1}>
+        <div className={style.mainAbout2}>
+          <div className={style.heading}>
+            <h1 class="animate__animated animate__slideInLeft"><i>Skyline construction &</i></h1>
+            <h1 class="animate__animated animate__slideInRight"><i></i>Engineers pvt ltd</h1>
+          </div>
+          <img src={imgAbout} />
+        </div>
+        <div className={style.mainAbout3}>
+          <div className={style.paraImg}>
+            <img src={asideImg} alt={'company pic'} />
+            <div className={style.para}>
+              <h3>Who we are</h3>
+              <br />
+              <p>L&T Construction is a division of Larsen & Toubro (L&T) a major Indian technology, engineering, construction, manufacturing and financial services conglomerate, with global operations. L&T addresses critical needs in key sectors - Hydrocarbon, Infrastructure, Power, Process Industries and Defence - for customers in over 30 countries around the world. L&T is engaged in core high impact sectors of the economy and our integrated capabilities span the entire spectrum of 'design to deliver'. With over 8 decades of a strong, customer focused approach and a continuous quest for world-class quality, we have unmatched expertise across Technology, Engineering, Construction, Infrastructure Projects and Manufacturing.</p>
 
-          Considering the growth and ever increasing scope for the committed and quality works, he has decided to go in for corporate form of organisation to overcome the limitations of sole proprietorship. The newly formed company will apply for new work bids on the basis of experience, expertise, credentials, technical capacity and financial capacity of the erstwhile sole proprietorship. Henceforth, all new tender applications will be made by the company and the sole proprietorship will continue the on-going works till the completion of the same.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div className={style.backgroundText}>
-        <img src={img3} alt='background-image' className={style.img2} />
-        <p>We're knowledgeable about
-          build your dream project...
-          Building The World more Stronger
-          The dedication and commitment of Shreehari Associates (P) Ltd., a well-known construction company goes far beyond the excellence in workmanship and time bound achievements. We would like to see our client at satisfaction, every time we complete a phase. We have prudence our human resource to deliver results with a clocklike precision, as the CONSTRUCTION is the fuel of our working.</p>\
-          
+      <div className={style.aboutSubContent1}>
+        <div className={style.aboutSubContent2}>
+          <img src={asideImg2} alt={'aside image'} />
+          <div className={style.aboutSubContent3}>
+            <h3>We're knowledgeable about
+              build your dream project...</h3><br />
+            <p>The dedication and commitment of Shreehari Associates (P) Ltd., a well-known construction company goes far beyond the excellence in workmanship and time bound achievements. We would like to see our client at satisfaction, every time we complete a phase. We have prudence our human resource to deliver results with a clocklike precision, as the CONSTRUCTION is the fuel of our working.</p>
+          </div>
+        </div>
       </div>
-     <Info/>
+      <div className={style.surveyer1}>
+        <div className={style.surveyer2}>
+          <div className={style.surveyerText}>
+            <h4>Great<i> Experience </i>for</h4>
+            <h2>Building The World more Stronger</h2>
+          </div>
+        </div>
+      </div>
+      <div >
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p><br />
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+      </div>
 
     </>
   )

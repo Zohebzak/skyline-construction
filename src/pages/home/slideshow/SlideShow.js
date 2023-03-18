@@ -1,4 +1,5 @@
 import React, { useRef , useEffect, useState } from 'react';
+import Info from '../info/Info';
 import './SlideShow.scss'
 
 
@@ -95,6 +96,7 @@ useEffect(() => {
                     </div>
                 </section>
             </main>
+            <Info/>
 
         </>
     )
