@@ -15,7 +15,6 @@ function Home() {
       <SlideShow slides={slides}/>
       {/* <img src={require('./images/image1.jpeg')}/>x */}
       {/* <Info/> */}
-      <Footer/>
      
     </>
   )

@@ -12,15 +12,30 @@ function ContactUs() {
                     <div className={style.mainAddress}>
                         <h3><i>Skyline Construction & Engineers Pvt Ltd</i></h3>
                         <p>  <i class="fa fa-map-marker" style={{ color: 'red', height: '10px' }}>
-                           </i> Amin Colony, Amim Colony, Parbhani, Maharashtra 431401</p>
+                        </i> Amin Colony, Amim Colony, Parbhani, Maharashtra 431401</p>
                         <p><i class="fa fa-mobile-phone" style={{ color: 'red', height: '10px' }}></i>+910000000000</p>
                         <p><i class="fa fa-envelope-o" style={{ color: 'red', height: '10px' }}></i>sample@gmail.com</p>
                     </div>
+                    <div className={style.form}>
+                        <form>
+                            <div className={style.inputField}>
+                                <input type={'tex'} placeholder={'Your name'} />
+                                <input type={'email'} placeholder={'Email address'} />
+                            </div>
+                            <div className={style.inputField}>
+                                <input type={'number'} placeholder={'Your Number'} />
+                                <input type={'tex'} placeholder={'Subject'} />
+                            </div>
 
+                            <textarea cols={40} rows={5} /><br/>
+                            <button>submit</button>
+                        </form>
+
+                    </div>
                 </div>
 
             </div>
-            
+
         </>
     )
 }
