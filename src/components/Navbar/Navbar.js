@@ -23,7 +23,7 @@ function Navbar() {
             <a href="#">On Going</a><br />
           </div> </li>
           <li><Link to={'/about'}>ABOUT US</Link></li>
-          <li><a href='#'>CONTACT US</a></li>
+          <li>< Link to={'/contact'}>CONTACT US</Link></li>
 
         </ul>
       </div>

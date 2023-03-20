@@ -1,4 +1,5 @@
 import React, { useRef , useEffect, useState } from 'react';
+import Cards from '../Cards';
 import Info from '../info/Info';
 import './SlideShow.scss'
 
@@ -97,6 +98,7 @@ useEffect(() => {
                 </section>
             </main>
             <Info/>
+            <Cards/>
 
         </>
     )

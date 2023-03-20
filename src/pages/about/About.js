@@ -3,7 +3,7 @@ import style from './About.module.scss'
 import sideimg from '../../images/company-pic.jpg'
 import img3 from '../../images/construction-background.jpg'
 import imgAbout from '../../images/about.jpeg'
-import asideImg from '../../images/about-aside-image.jpg'
+import asideImg from '../../images/about-aside-image2.jpg'
 import asideImg2 from '../../images/aside-image2.jpg'
 import 'animate.css';
 

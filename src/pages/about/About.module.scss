@@ -68,7 +68,9 @@
 .surveyer1{
     height: 90vh;
     width: 100%;
-    background-image: url('../../images/surveyer-background.jpg');
+    background-image: url('../../images/background-cover2.jpg');
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -76,5 +78,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 3rem;
+    width: 50%;
+    padding-top: 5rem;
+    color: white;
+    font-weight: bolder;
 }
 
