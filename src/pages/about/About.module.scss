@@ -4,7 +4,7 @@
 }
 //aboutUs & aside image css
 .mainAbout2 img {
-    width: 70.3rem;
+    width: 77.3rem;
 }
 
 .mainAbout3 {
@@ -83,5 +83,29 @@
     padding-top: 5rem;
     color: white;
     font-weight: bolder;
+}
+.textFromRight{
+    animation: rightText 1s ease-in ;
+}
+.textFromLeft{
+    animation: leftText .7s ease-in ;
+}
+@keyframes rightText {
+    0%{
+        transform: skewX(13deg) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+    
+}
+@keyframes leftText {
+    0%{
+        transform: skewY(13deg) translateY(500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+    
 }
 

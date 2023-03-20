@@ -36,13 +36,9 @@
   justify-content: space-around;
   align-items: center;
   border: 1px solid black;
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 62%
-  );
+
   border: none;
+  font-family: Times New Roman;
 }
 
 .im-section {
@@ -76,13 +72,16 @@
 
 .footer-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid black;
   height: 50px;
   border: none;
   background-color: rgba(2, 0, 36, 1);
   color: #ffe3a3;
+  padding: 1rem;
+  font-family: Times New Roman;
+
 }
 
 .text-footer {
@@ -92,10 +91,6 @@
   color: #ffe3a3;
 }
 
-.text-footer p {
-  margin-right: 1rem;
-  margin-bottom: 0px;
-}
 
 .foterlist {
   list-style: none;
@@ -103,11 +98,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.foterlist li {
-  margin-right: 20px;
-}
 
 .foterlist li:hover {
   cursor: pointer;
   border-bottom: 1px solid #ffe3a3;
+}
+.list-item{
+  font-weight: bold;
 }
