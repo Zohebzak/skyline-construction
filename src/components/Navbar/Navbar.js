@@ -16,7 +16,7 @@ function Navbar() {
 
 
           <li><Link to={'/'}>HOME </Link></li>
-          <li>    <a href='#'>OUR STRENGTH</a> <svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg>
+          <li><a href='#'>OUR STRENGTH</a> <svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg>
           </li>
           <li className='DropDown' ><a href='#'>OUR PROJECTS<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></a><div className="drop-content">
             <a href="#">Completed</a><br />
