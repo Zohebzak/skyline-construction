@@ -15,8 +15,8 @@ function About() {
       <div className={style.mainAbout1}>
         <div className={style.mainAbout2}>
           <div className={style.heading}>
-            <h1 class="animate__animated animate__slideInLeft"><i>Skyline construction &</i></h1>
-            <h1 class="animate__animated animate__slideInRight"><i></i>Engineers pvt ltd</h1>
+            <h1 className={style.textFromRight}><i>Skyline construction &</i></h1>
+            <h1 className={style.textFromRight}><i></i>Engineers pvt ltd</h1>
           </div>
           <img src={imgAbout} />
         </div>

@@ -8,7 +8,7 @@ function Footer() {
       <div className='maindiv'>
         <div className='im-section'>
           <img src={img} alt='!' />
-          <h4>Skyline Construction PVT LTD</h4>
+          <h4>Skyline Construction Pvt Ltd</h4>
         </div>
         <div className='list-item'>
           <ul className='list'>
@@ -21,15 +21,12 @@ function Footer() {
       </div>
       <div className='footer-div'>
         <div className='text-footer'>
-          <p>@2023 BlueAxis IT Services.</p>
-          <p>Create By : Mubashir Khan</p>
+          <p>copyrights &#169; Skyline Constructions & Engineers(P)Ltd</p>
         </div>
         <div>
-          <ul className='foterlist'>
-            <li>COPYRIGHT & TERMS</li>
-            <li>PRIVACY POLICY</li>
-            <li>SITEMAP</li>
-          </ul>
+          <div className='foterlist'>
+          <p>@2023 BlueAxis IT Services.</p>
+          </div>
         </div>
       </div>
     </>

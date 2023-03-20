@@ -1,11 +1,24 @@
+.navBarDiv{
+    background-color: SkyBlue;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -5px;
+    z-index: 2;
+    height: 5.2rem;
+    min-height: 70px;
+    width: calc(100% - 0rem);
+    // background-color: #fff;
+    padding: 0 1rem;
+    box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+}
 .mainDiv {
     display: flex;
     justify-content: center;
-    //  background-image: linear-gradient(#C04848, #480048);
-
-    background: rgb(2, 0, 36);
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 62%);
+    background-color:SkyBlue;
     height: 5.2rem;
+
+   
+    
 
     .navUL {
         list-style: none;
@@ -17,7 +30,7 @@
 
         li:nth-child(3) div {
             position: absolute;
-            background-color: #a02a2a;
+            background-color: black;
             width: 205px;
             display: none;
 
@@ -58,11 +71,12 @@
             width: 0;
             height: 2px;
             transition: 0.3s ease;
+            font-family: Times New Roman;
          
         } 
        
         li a:hover {
-            border-bottom: 3px solid rgb(216, 0, 0);
+            border-bottom: 2px solid black;
             color: rgb(61, 57, 57);
          
         }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div>
+    <div className={style.navBarDiv}>
       {/* <header style={{ textAlign: 'center' }}>SKYLINE CONSCTRUCTIONS AND ENGENEERS PVT LTD</header> */}
       <div className={style.mainDiv}>
         <div className={style.skylineLogo}>
