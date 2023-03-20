@@ -10,6 +10,7 @@ import About from './pages/about/About';
 import Home from './pages/home/Home';
 import Root from './components/root/Root';
 import ContactUs from './pages/contact us/ContactUs';
+import Login from './components/loginpage/Login';
 
 function App() {
   const router=createBrowserRouter(
@@ -19,6 +20,7 @@ function App() {
         <Route path='/'element={<Home/>}/>
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<ContactUs/>}/>
+        <Route path='/login' element={<Login/>}/>
 
         </Route>
         
