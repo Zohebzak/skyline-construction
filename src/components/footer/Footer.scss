@@ -1,3 +1,36 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.main-containt {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  // align-items: center;
+}
+.main1-text {
+  display: flex;
+}
+.email-section {
+  display: flex;
+}
+.phoneno-section {
+  display: flex;
+}
+.text-line p {
+  font-size: 1rem;
+  margin-bottom: 0px;
+}
+.email-text p {
+  font-size: 1rem;
+  margin-bottom: 0px;
+}
+.phone-no p {
+  font-size: 1rem;
+  margin-bottom: 0px;
+}
+
 .maindiv {
   display: flex;
   justify-content: space-around;
@@ -75,7 +108,11 @@
   justify-content: space-between;
   align-items: center;
 }
-// .foterlist li{
-//     margin-right: 20px;
-// }
+.foterlist li{
+    margin-right: 20px;
+}
 
+.foterlist li:hover{
+    cursor: pointer;
+    border-bottom: 1px solid #ffe3a3;
+}
