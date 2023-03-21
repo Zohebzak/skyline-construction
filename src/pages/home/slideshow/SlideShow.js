@@ -98,7 +98,7 @@ useEffect(() => {
                 </section>
             </main>
             <Info/>
-            {/* <Cards/> */}
+            <Cards/>
 
         </>
     )

@@ -11,23 +11,23 @@ function ContactUs() {
                 <div className={style.mainContact1}>
                     <div className={style.mainAddress}>
                         <h3><i>Skyline Construction & Engineers Pvt Ltd</i></h3>
-                        <p>  <i class="fa fa-map-marker" style={{ color: 'red', height: '10px' }}>
+                        <p>  <i class="fa fa-map-marker" style={{ color: 'red', height: '10px', width: '1.5rem',fontSize:'1.5rem' }}>
                         </i> Amin Colony, Amim Colony, Parbhani, Maharashtra 431401</p>
-                        <p><i class="fa fa-mobile-phone" style={{ color: 'red', height: '10px' }}></i>+910000000000</p>
-                        <p><i class="fa fa-envelope-o" style={{ color: 'red', height: '10px' }}></i>sample@gmail.com</p>
+                        <p><i class="fa fa-mobile-phone" style={{ color: 'red', height: '10px', width: '1.5rem',fontSize:'1.5rem' }}></i>+910000000000</p>
+                        <p><i class="fa fa-envelope-o" style={{ color: 'red', height: '10px', width: '2.3rem',fontSize:'1.5rem' }}></i>sample@gmail.com</p>
                     </div>
                     <div className={style.form}>
                         <form>
                             <div className={style.inputField}>
-                                <input type={'tex'} placeholder={'Your name'} />
+                                <input type={'text'} placeholder={'Your name'} className={style.inputBox} />
                                 <input type={'email'} placeholder={'Email address'} />
                             </div>
                             <div className={style.inputField}>
-                                <input type={'number'} placeholder={'Your Number'} />
-                                <input type={'tex'} placeholder={'Subject'} />
+                                <input type={'number'} placeholder={'Your Number'} className={style.inputBox} />
+                                <input type={'text'} placeholder={'Subject'} />
                             </div>
 
-                            <textarea cols={40} rows={5} /><br/>
+                            <textarea cols={40} rows={5} placeholder={'Your messege...'} /><br />
                             <button>submit</button>
                         </form>
 

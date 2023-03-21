@@ -13,7 +13,7 @@
 }
 .mainDiv {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color:SkyBlue;
     height: 5.2rem;
 
@@ -38,12 +38,14 @@
 
         li:nth-child(3):hover div {
             position: absolute;
-            background-color: #5aaeea;
+            background-color:SkyBlue;
             width: 140px;
             display: block;
             z-index: 1;
-            border: 1px solid black;
-            padding: 2px;
+            padding: 0.5rem;
+            margin-left: 2rem;
+           
+           
         }
 
         // .li:nth-child(3) :hover div {

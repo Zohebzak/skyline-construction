@@ -1,8 +1,64 @@
-.mainContact1{
-display: flex;
-align-items: center;
-margin: 2rem;
+.mainContact1 {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
 }
-.mainAddress{
+
+.mainAddress {
   padding: 3rem;
+  // padding-bottom: 13rem;
+  line-height: 3rem;
+}
+
+.inputField {
+  margin-bottom: 2rem;
+}
+
+.inputField ::placeholder {
+  padding: 0.5rem;
+}
+
+.inputField input {
+  width: 10rem;
+  background-color: #e6f9ff;
+  border: 1px solid black;
+  width: 14rem;
+  height: 2rem;
+  border-radius: 5px;
+}
+
+textarea {
+  background-color: #e6f9ff;
+  width: 30rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+
+
+}
+
+.inputBox {
+  margin-right: 2rem;
+}
+
+form button {
+  width: 4rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: SkyBlue;
+  border: 1px solid black;
+
+
+}
+
+.inputField input[type='text'] {
+  padding: 0.5rem;
+}
+
+.inputField input[type='email'] {
+  padding: 0.5rem;
+}
+
+.inputField input[type='number'] {
+  padding: 0.5rem;
 }
