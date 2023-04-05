@@ -47,8 +47,10 @@ form button {
   border-radius: 10px;
   background-color: SkyBlue;
   border: 1px solid black;
-
-
+}
+form button:hover {
+background-color: black;
+color: #ffe3a3;
 }
 
 .inputField input[type='text'] {

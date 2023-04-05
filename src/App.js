@@ -29,7 +29,7 @@ function App() {
         <Route path='/strength' element={<OurStrength/>}/>
         <Route path='/completed' element={<Completed/>}/>
         <Route path='/OnGoing' element={<OnGoing/>}/>
-
+        <Route path='/login' element={<Login/>}/>
 
 
         </Route>

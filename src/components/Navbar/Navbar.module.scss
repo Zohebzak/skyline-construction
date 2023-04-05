@@ -17,9 +17,6 @@
     background-color:SkyBlue;
     height: 5.2rem;
 
-   
-    
-
     .navUL {
         list-style: none;
         justify-content: space-between;
@@ -74,12 +71,13 @@
             height: 2px;
             transition: 0.3s ease;
             font-family: Times New Roman;
-         
+        
         } 
        
         li a:hover {
             border-bottom: 2px solid black;
             color: rgb(61, 57, 57);
+           
          
         }
 
@@ -90,4 +88,7 @@
         }
     }
 
+}
+@media(max-width:450px){
+   
 }

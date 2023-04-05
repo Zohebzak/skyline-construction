@@ -1,7 +1,7 @@
-
-.heading{
+.heading {
     text-align: center;
 }
+
 //aboutUs & aside image css
 .mainAbout2 img {
     width: 77.3rem;
@@ -65,7 +65,8 @@
     color: white;
     margin: 3rem;
 }
-.surveyer1{
+
+.surveyer1 {
     height: 90vh;
     width: 100%;
     background-image: url('../../images/background-cover2.jpg');
@@ -74,7 +75,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.surveyerText{
+
+.surveyerText {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -84,28 +86,153 @@
     color: white;
     font-weight: bolder;
 }
-.textFromRight{
-    animation: rightText 1s ease-in ;
-}
-.textFromLeft{
-    animation: leftText .7s ease-in ;
-}
-@keyframes rightText {
-    0%{
-        transform: skewX(13deg) translateX(-500px);
-    }
-    100%{
-        transform: skew(0deg);
-    }
-    
-}
-@keyframes leftText {
-    0%{
-        transform: skewY(13deg) translateY(500px);
-    }
-    100%{
-        transform: skew(0deg);
-    }
-    
+
+.textFromRight {
+    animation: rightText 1s ease-in;
 }
 
+.textFromLeft {
+    animation: leftText .7s ease-in;
+}
+
+@keyframes rightText {
+    0% {
+        transform: skewX(13deg) translateX(-500px);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+
+}
+
+@keyframes leftText {
+    0% {
+        transform: skewY(13deg) translateY(500px);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+
+}
+
+.vision {
+
+    line-height: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 4rem;
+
+}
+
+.vision img {
+    width: 30rem;
+    height: 23rem;
+    margin-top: 2rem;
+}
+
+.visionText {
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.visionText h2 {
+    border-bottom: 2px solid skyblue;
+    width: 6.6rem;
+}
+
+.mission {
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.mission img {
+    width: 25rem;
+    // height: 20rem;
+}
+
+.missionText {
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.missionText h2 {
+    border-bottom: 2px solid skyblue;
+    width: 6.6rem;
+}
+
+@media(max-width:450px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .heading h1{
+       font-size: medium;
+    }
+    
+    .mainAbout2 img {
+        width: 22rem;
+    }
+
+    .paraImg {
+
+        display: flex;
+        align-items: center;
+        background-color: red;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .paraImg img {
+        width: 20rem;
+        height: 20rem;
+        // margin: 2rem;
+       
+    }
+
+    .para {
+        width: 50vh;
+    }
+
+    .mainAbout3 {
+        margin: 0;
+    }
+
+    .aboutSubContent2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .aboutSubContent2 img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .vision {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .vision img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .mission {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .mission img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+}

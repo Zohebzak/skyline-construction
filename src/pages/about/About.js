@@ -5,6 +5,8 @@ import img3 from '../../images/construction-background.jpg'
 import imgAbout from '../../images/about.jpeg'
 import asideImg from '../../images/about-aside-image2.jpg'
 import asideImg2 from '../../images/aside-image2.jpg'
+import ourVision from '../../images/our_vision3.png'
+import ourMission from '../../images/our_mission.png'
 import 'animate.css';
 
 
@@ -14,10 +16,10 @@ function About() {
     <>
       <div className={style.mainAbout1}>
         <div className={style.mainAbout2}>
-          <div className={style.heading}>
+          {/* <div className={style.heading}>
             <h1 className={style.textFromRight}><i>Skyline construction &</i></h1>
             <h1 className={style.textFromRight}><i></i>Engineers pvt ltd</h1>
-          </div>
+          </div> */}
           <img src={imgAbout} />
         </div>
         <div className={style.mainAbout3}>
@@ -26,7 +28,14 @@ function About() {
             <div className={style.para}>
               <h3>Who we are</h3>
               <br />
-              <p>L&T Construction is a division of Larsen & Toubro (L&T) a major Indian technology, engineering, construction, manufacturing and financial services conglomerate, with global operations. L&T addresses critical needs in key sectors - Hydrocarbon, Infrastructure, Power, Process Industries and Defence - for customers in over 30 countries around the world. L&T is engaged in core high impact sectors of the economy and our integrated capabilities span the entire spectrum of 'design to deliver'. With over 8 decades of a strong, customer focused approach and a continuous quest for world-class quality, we have unmatched expertise across Technology, Engineering, Construction, Infrastructure Projects and Manufacturing.</p>
+              <p>Skyline Construc t i on was e st a b lish ed as a propr i e t orship conc ern
+                n am e l y “ IRAJ I. SIDDIQUI” in 2014 by “ IRAJ I. SIDDIQUI”. The f i rm w a s
+                enga g e d in carrying out Commercia l & R esid ential projects (Govt . & Pr i vate)
+                in t he e a rl i e r ye a rs. T h e fir m wa s a ls o st a rt e d wo r k i n g as a s up p l i e r of
+                R e a d y Mix C o nc r e t e in 2017. T h e c o m p a n y is k n o w n fo r its h i g h e st q u a l i t y
+                and a t t enti ve l y t owards t heir c l i e nt e le s. The compan y has execut ed siz eable
+                b u i l d i n g , b ri d g e s & r o a d s in st a t e of M a h a r a s h tr a stri c t l y w i t h t h e Go vt.
+                qu a lit y norms a nd specifications..</p>
 
             </div>
           </div>
@@ -47,13 +56,27 @@ function About() {
         <div className={style.surveyer2}>
           <div className={style.surveyerText}>
             <h4>Great<i> Experience </i>for</h4>
-            <h2>Building The World more Stronger</h2>
+            <h2>About Skyline
+               is a fastest growing company in the field of civil Engineering, in
+              Roadways, Railways, Irrigation and heavy Earth moving equipment
+              Machinery, having registered office of Mumbai and Parbhani.</h2>
           </div>
         </div>
       </div>
-      <div >
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p><br />
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+      <div className={style.vision} >
+        <img src={ourVision} alt={'our-vision'} />
+        <div className={style.visionText}>
+          <h2>Our Vision</h2>
+          <p>“As a construction company, our vision is to be a leading provider of high-quality, sustainable, and innovative construction solutions that meet the needs of our clients while also promoting the greater good of our community and the environment. We strive to exceed our clients' expectations by delivering exceptional value and service through our team's expertise, dedication, and passion for excellence. We envision a future where our projects not only meet the highest standards of quality and safety but also make a positive impact on the communities in which they are built. Our commitment to sustainability and environmentally responsible practices is a cornerstone of our vision, as we believe that the construction industry can and should play a significant role in building a more sustainable and equitable future for all.”</p><br />
+        </div>
+      </div>
+      <div className={style.mission}>
+        <img src={ourMission} alt={'our-mission'} />
+        <div className={style.missionText}>
+          <h2>Our Mission</h2>
+          <p>Our mission as a construction company is to provide our clients with reliable, efficient, and cost-effective construction solutions that exceed their expectations. We are committed to delivering projects on time and within budget, while also maintaining the highest standards of quality and safety. We strive to build strong relationships with our clients, employees, subcontractors, and suppliers, based on honesty, integrity, and mutual respect. We aim to be a company that our clients can trust to deliver exceptional results, time and time again. In addition, we are committed to promoting sustainability in everything we do, from our building practices to our daily operations. We believe that by incorporating sustainable practices into our business model, we can help create a better future for ourselves, our clients, and the communities we serve. Overall, our mission is to be a construction company that is known for its excellence, reliability, and commitment to sustainability.</p>
+        </div>
+
       </div>
 
     </>

@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import img from '../../images/SkylineLogo2png.png'
 import './Footer.scss'
+
 
 function Footer() {
   return (
@@ -9,7 +11,7 @@ function Footer() {
       <div className='maindiv'>
         <div className='im-section'>
           <img src={img} alt='!' />
-          <h4>Skyline Construction Pvt Ltd</h4>
+          <h4>Skyline Contractors & Engineers Pvt Ltd</h4>
         </div>
         <div className='list-item'>
           <ul className='list'>
@@ -17,6 +19,8 @@ function Footer() {
             <li>Our Project</li>
             <li>About Us</li>
             <li>Contact Us</li>
+            <li>Gallery</li>
+            <li><Link to={'/Login'}>login </Link></li>
           </ul>
         </div>
       </div>
@@ -24,10 +28,9 @@ function Footer() {
         <div className='main1-text'>
           <span><i class="fa fa-map-marker" style={{ color: 'bule', fontSize: '30px', paddingRight: '2rem' }} /></span>
           <div className='text-line'>
-            <p>Plot No. 36, Gut No. 41,</p>
             <p>Amin Conolny,</p>
             <p>Parbhani 431401.</p>
-            <p>Maharashtra State, (India).</p>
+            <p>Maharashtra (India).</p>
           </div>
         </div>
         <div className='email-section'>
@@ -48,7 +51,7 @@ function Footer() {
       </div>
       <div className='footer-div'>
         <div className='text-footer'>
-          <p>copyrights &#169; Skyline Constructions & Engineers(P)Ltd</p>
+          <p>copyrights &#169; Skyline Contractors & Engineers(P)Ltd</p>
         </div>
         <div>
           <div className='foterlist'>
