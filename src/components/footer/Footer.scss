@@ -91,7 +91,6 @@
   color: #ffe3a3;
   padding: 1rem;
   font-family: Times New Roman;
-
 }
 
 .text-footer {
@@ -105,7 +104,6 @@
   margin-right: 1rem;
   margin-bottom: 0px;
   font-size: medium;
-
 }
 
 .foterlist p {
@@ -129,8 +127,8 @@
   border-bottom: 1px solid #ffe3a3;
 }
 
-@media(max-width:450px) {
-  .im-section h4{
+@media (max-width: 450px) {
+  .im-section h4 {
     font-size: larger;
   }
   .maindiv {
@@ -139,19 +137,34 @@
     flex-wrap: wrap;
     align-items: center;
   }
-  .list{
+  .list {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .footer-div{
+  .footer-div {
     display: flex;
     flex-direction: row;
   }
-  .footer-div p{
+  .footer-div p {
     font-size: small;
   }
-  .main-containt{
+  .main-containt {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main1-text {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .email-section {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .phoneno-section {
+    display: flex;
+    margin-bottom: 1rem;
   }
 }

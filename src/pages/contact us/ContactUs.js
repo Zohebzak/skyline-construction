@@ -11,10 +11,10 @@ function ContactUs() {
                 <div className={style.mainContact1}>
                     <div className={style.mainAddress}>
                         <h3><i>Skyline Contractors & Engineers Pvt Ltd</i></h3>
-                        <p>  <i class="fa fa-map-marker" style={{ color: 'red', height: '10px', width: '1.5rem',fontSize:'1.5rem' }}>
+                        <p>  <i class="fa fa-map-marker" style={{ color: 'black', height: '10px', width: '1.5rem',fontSize:'1.5rem' }}>
                         </i> Amin Colony, Amim Colony, Parbhani, Maharashtra 431401</p>
-                        <p><i class="fa fa-mobile-phone" style={{ color: 'red', height: '10px', width: '1.5rem',fontSize:'1.5rem' }}></i>+910000000000</p>
-                        <p><i class="fa fa-envelope-o" style={{ color: 'red', height: '10px', width: '2.3rem',fontSize:'1.5rem' }}></i>sample@gmail.com</p>
+                        <p><i class="fa fa-mobile-phone" style={{ color: 'black', height: '10px', width: '1.5rem',fontSize:'1.5rem' }}></i>+910000000000</p>
+                        <p><i class="fa fa-envelope-o" style={{ color: 'black', height: '10px', width: '2.3rem',fontSize:'1.5rem' }}></i>sample@gmail.com</p>
                     </div>
                     <div className={style.form}>
                         <form>

@@ -31,37 +31,6 @@
   font-size: 20px;
 }
 
-.btn_invitation {
-  margin: 1rem;
-  padding: 0;
-  /* position: absolute; */
-  border: 1px solid skyblue;
-  border-radius: 36px;
-  background: #ffffff;
-}
-
-.button-singup {
-  width: 121px;
-  height: 36px;
-  border-radius: 36px;
-  background: rgb(0, 212, 255) 62%;
-  border: none;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.button-login {
-  width: 121px;
-  height: 36px;
-  border-radius: 36px;
-  border: none;
-  color: rgb(0, 212, 255) 62%;
-  font-weight: 400;
-  font-size: 16px;
-  background: #ffffff;
-}
-
 .inputs {
   display: flex;
   justify-content: center;
@@ -78,18 +47,6 @@
   border-radius: 25px;
   width: 328px;
   height: 33px;
-}
-
-
-
-.input-items[type="text"]::placeholder {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  // padding-left: 10px;
-  color: #929292;
 }
 
 .input-items[type="email"]::placeholder {
@@ -114,9 +71,6 @@
   color: #929292;
 }
 
-.input-items[type="text"]{
-  padding-left: 1rem;
-}
 .input-items[type="email"]{
   padding-left: 1rem;
 }
