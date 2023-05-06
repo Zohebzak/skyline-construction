@@ -11,7 +11,9 @@ import 'animate.css';
 
 
 
+
 function About() {
+
   return (
     <>
       <div className={style.mainAbout1}>
@@ -78,7 +80,6 @@ function About() {
         </div>
 
       </div>
-
     </>
   )
 }
