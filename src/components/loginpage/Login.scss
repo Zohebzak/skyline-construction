@@ -55,8 +55,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  // padding-left: 10px;
-
   color: #929292;
 }
 
@@ -93,6 +91,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  // padding: 2rem;
 }
 
 .sing_btn button {
@@ -102,49 +101,53 @@
   width: 184px;
   font-size: 1.5rem;
   height: 36px;
-  color: #ffffff;
+  color: black;
   border: 1px;
 }
-
-.line_text :first-child div {
-  height: 2px;
-  border-top: 1px solid black;
+.sing_btn button:hover{
+  background-color: rgb(8, 62, 70);
+  color: white;
 }
 
-.line_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 0px; */
-}
+// .line_text :first-child div {
+//   height: 2px;
+//   border-top: 1px solid black;
+// }
 
-.btn_icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* position: relative; */
-  margin-top: 3rem;
-}
+// .line_text {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   /* margin: 0px; */
+// }
 
-.google_btn {
-  box-sizing: border-box;
-  /* position: absolute; */
-  width: 328px;
-  background: #ffffff;
-  border: 1px solid skyblue;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-  /* margin: 1.2rem; */
+// .btn_icons {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   /* position: relative; */
+//   margin-top: 3rem;
+// }
+
+// .google_btn {
+//   box-sizing: border-box;
+//   /* position: absolute; */
+//   width: 328px;
+//   background: #ffffff;
+//   border: 1px solid skyblue;
+//   border-radius: 25px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 36px;
+//   /* margin: 1.2rem; */
   
-}
-.google_btn:hover{
-  transition: all 0.3s ease;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  // margin-left: 1rem;
-}
+// }
+// .google_btn:hover{
+//   transition: all 0.3s ease;
+//   -webkit-transform: scale(1.1);
+//   -ms-transform: scale(1.1);
+//   transform: scale(1.1);
+//   // margin-left: 1rem;
+// }

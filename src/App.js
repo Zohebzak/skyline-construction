@@ -18,22 +18,20 @@ import OnGoing from './components/projects/OnGoing';
 
 function App() {
 
-  const router=createBrowserRouter(
+  const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
-        <Route element={<Root/>}>
-        <Route path='/'element={<Home/>}/>
-        <Route path='/about' element={<About/>} />
-        <Route path='/contact' element={<ContactUs/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/strength' element={<OurStrength/>}/>
-        <Route path='/completed' element={<Completed/>}/>
-        <Route path='/OnGoing' element={<OnGoing/>}/>
-        <Route path='/login' element={<Login/>}/>
-
-
+        <Route element={<Root />}>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<ContactUs />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/strength' element={<OurStrength />} />
+          <Route path='/completed' element={<Completed />} />
+          <Route path='/OnGoing' element={<OnGoing />} />
+          <Route path='/login' element={<Login />} />
         </Route>
-        
+
       </Route>
     )
   )
