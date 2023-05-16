@@ -17,8 +17,10 @@ import Completed from './components/projects/Completed';
 import OnGoing from './components/projects/OnGoing';
 import AdminRoutes from './components/root/Admin';
 import Gallery from './components/footer/Gallery';
-
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
 function App() {
+  const [theme, colorMode] = useMode();
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -49,9 +51,12 @@ function App() {
   )
   return (
     <>
+     <ThemeProvider theme={theme}>
+        <CssBaseline />
       <RouterProvider router={router}>
 
       </RouterProvider>
+      </ThemeProvider>
 
      
     </>

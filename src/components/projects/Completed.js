@@ -1,10 +1,87 @@
 import React from 'react'
 import './Completed.scss'
+import { Box, Typography, useTheme } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
+import { tokens } from "../../theme";
+const data =[
+    {
+        id: 1,
+        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
+        age: 25,
+        phone: 1234567890,
+        accessLevel: "Private",
+    },
+    {
+        id: 2,
+        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
+        age: 25,
+        phone: 1234567890,
+        accessLevel: "Private",
+    },
+    {
+        id: 3,
+        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
+        age: 25,
+        phone: 1234567890,
+        accessLevel: "Private",
+    },
+    {
+        id: 4,
+        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
+        age: 25,
+        phone: 1234567890,
+        accessLevel: "Private",
+    },
+    {
+        id: 5,
+        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
+        age: 25,
+        phone: 1234567890,
+        accessLevel: "Private",
+    }
+]
 
 function Completed() {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);  
+    const columns = [
+        { field: "id", headerName: "ID" },
+        {
+          field: "name",
+          headerName: "sr no",
+          flex: 1,
+          cellClassName: "name-column--cell",
+        },
+        {
+          field: "age",
+          headerName: "Name of Work",
+          type: "number",
+          headerAlign: "left",
+          align: "left",
+        },
+        {
+          field: "phone",
+          headerName: "amount of work (inlacks)",
+          flex: 1,
+        },
+        {
+          field: "accessLevel",
+          headerName: "Access Level",
+          flex: 1,
+   
+        },
+        {
+          field: "Action",
+          headerName: "Action",
+          flex: 1,
+        renderCell: function(field){
+return <button>edit</button> 
+        }
+        },
+      ];
     return (
         <>
-            <div className='main-completed'>
+            {/* <div className='main-completed'>
                 <h1>Completed project</h1>
                 <p>As a Reputed company we have successfully completed projects with all sefty norms </p>
                 <table>
@@ -114,7 +191,41 @@ function Completed() {
                         <td>10.77</td>
                     </tr>
                 </table>
-            </div>
+            </div> */}
+             <Box m="20px">
+      {/* <Header title="TEAM" subtitle="Managing the Team Members" /> */}
+      <Box
+        m="40px 0 0 0"
+        height="75vh"
+        sx={{
+          "& .MuiDataGrid-root": {
+            border: "none",
+          },
+          "& .MuiDataGrid-cell": {
+            borderBottom: "none",
+          },
+          "& .name-column--cell": {
+            color: colors.greenAccent[300],
+          },
+          "& .MuiDataGrid-columnHeaders": {
+            backgroundColor: colors.blueAccent[700],
+            borderBottom: "none",
+          },
+          "& .MuiDataGrid-virtualScroller": {
+            backgroundColor: colors.primary[400],
+          },
+          "& .MuiDataGrid-footerContainer": {
+            borderTop: "none",
+            backgroundColor: colors.blueAccent[700],
+          },
+          "& .MuiCheckbox-root": {
+            color: `${colors.greenAccent[200]} !important`,
+          },
+        }}
+      >
+        <DataGrid checkboxSelection rows={data} columns={columns} />
+      </Box>
+    </Box>
         </>
     )
 }

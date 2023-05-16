@@ -32,6 +32,7 @@ import {
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { tokens } from "../../theme";
 const { styled } = require("@mui/system");
 
 const FlexBetween = styled(Box)({
@@ -78,6 +79,7 @@ const Sidebar = () => {
 
   const navigate = useNavigate();
   const theme = useTheme();
+  const colors = tokens(theme.mode);
 
   useEffect(() => {
     setActive(pathname.substring(1));
@@ -94,9 +96,10 @@ const Sidebar = () => {
           sx={{
             width: "250px",
             "& .MuiDrawer-paper": {
-              color: theme.palette.secondary[200],
-              backgroundColor: theme.palette.background.alt,
+              color: colors.secondary[200],
+              backgroundColor: colors.blueAccent[100],
               boxSixing: "border-box",
+              boxShadow: "5px 0 5px rgba(0, 0, 0, 0.1)",
               borderWidth: isNonMobile ? 0 : "2px",
               width: "250px",
             },
@@ -104,7 +107,7 @@ const Sidebar = () => {
         >
           <Box width="100%">
             <Box m="1.5rem 2rem 2rem 3rem">
-              <FlexBetween color={theme.palette.secondary.main}>
+              <FlexBetween color={colors.secondary[100]}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography variant="h4" fontWeight="bold">
                     Skyline
@@ -138,12 +141,12 @@ const Sidebar = () => {
                       sx={{
                         backgroundColor:
                           active === lcText
-                            ? theme.palette.secondary[300]
+                            ? colors.secondary[300]
                             : "transparent",
                         color:
                           active === lcText
-                            ? theme.palette.primary[600]
-                            : theme.palette.secondary[100],
+                            ? colors.primary[600]
+                            : colors.secondary[100],
                       }}
                     >
                       <ListItemIcon
@@ -151,8 +154,8 @@ const Sidebar = () => {
                           ml: "2rem",
                           color:
                             active === lcText
-                              ? theme.palette.primary[600]
-                              : theme.palette.secondary[200],
+                              ? colors.primary[600]
+                              : colors.secondary[200],
                         }}
                       >
                         {icon}
@@ -176,13 +179,13 @@ const Sidebar = () => {
                 <Typography
                   fontWeight="bold"
                   fontSize="0.9rem"
-                  sx={{ color: theme.palette.secondary[100] }}
+                  sx={{ color: colors.secondary[100] }}
                 >
                  Nerraj
                 </Typography>
                 <Typography
                   fontSize="0.8rem"
-                  sx={{ color: theme.palette.secondary[200] }}
+                  sx={{ color: colors.secondary[200] }}
                 >
                   Skyline
                 </Typography>
