@@ -49,7 +49,7 @@ useEffect(() => {
                     <div className="slideshow-inner">
                         <div className="slides">
                             <div className="slide is-active" >
-                                <div className="slide-content">
+                                {/* <div className="slide-content">
                                     <div className="caption">
                                         <div className="title">Slide title {currentIndex}</div>
                                         <div className="text">
@@ -59,7 +59,7 @@ useEffect(() => {
                                             <span className="btn-inner">Learn More</span>
                                         </a>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="image-container">
                                     <img src={require(`${slides[currentIndex].url}`)} alt="" className="image" />
                                 </div>

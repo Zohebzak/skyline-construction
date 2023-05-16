@@ -64,3 +64,26 @@ color: #ffe3a3;
 .inputField input[type='number'] {
   padding: 0.5rem;
 }
+
+@media(max-width:450px) {
+  iframe{
+    width: 100vw;
+  }
+  .mainContact1{
+    display: flex;
+    flex-direction: column;
+  }
+  .form input {
+    width: 30vh;
+    margin-bottom: 20px;
+  }
+  textarea{
+    width: 30vh;
+  }
+  .inputField {
+    margin-bottom: 0;
+  }
+  .mainAddress{
+    padding: 0;
+  }
+}

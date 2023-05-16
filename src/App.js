@@ -15,12 +15,25 @@ import Login from './components/loginpage/Login';
 import OurStrength from './components/ourStrength/OurStrength';
 import Completed from './components/projects/Completed';
 import OnGoing from './components/projects/OnGoing';
-
+import AdminRoutes from './components/root/Admin';
+import Gallery from './components/footer/Gallery';
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
 function App() {
+  const [theme, colorMode] = useMode();
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
+<<<<<<< HEAD
+=======
+        <Route path='/login' element={<Login />} />
+        <Route element={<AdminRoutes />}>
+          <Route path='/Employes' element={<Completed />} />
+          <Route path='/admin' element={<OnGoing />} />
+        </Route>
+
+>>>>>>> f1e22e5f0faf7f6ef4fe3e4d2d654f319f1e0cc2
         <Route element={<Root />}>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -30,6 +43,13 @@ function App() {
           <Route path='/completed' element={<Completed />} />
           <Route path='/OnGoing' element={<OnGoing />} />
           <Route path='/login' element={<Login />} />
+<<<<<<< HEAD
+=======
+          <Route path='/Gallery' element={<Gallery/>} />
+
+
+
+>>>>>>> f1e22e5f0faf7f6ef4fe3e4d2d654f319f1e0cc2
         </Route>
 
       </Route>
@@ -37,11 +57,14 @@ function App() {
   )
   return (
     <>
+     <ThemeProvider theme={theme}>
+        <CssBaseline />
       <RouterProvider router={router}>
 
       </RouterProvider>
+      </ThemeProvider>
 
-
+     
     </>
   );
 }

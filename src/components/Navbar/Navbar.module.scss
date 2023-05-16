@@ -1,4 +1,4 @@
-.navBarDiv{
+.navBarDiv {
     background-color: SkyBlue;
     position: -webkit-sticky;
     position: sticky;
@@ -11,10 +11,16 @@
     padding: 0 1rem;
     box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 }
+.skylineLogo img{
+    height: 5.4rem;
+}
+.skylineLogo img{
+    cursor: pointer;
+}
 .mainDiv {
     display: flex;
     justify-content: space-between;
-    background-color:SkyBlue;
+    background-color: SkyBlue;
     height: 5.2rem;
 
     .navUL {
@@ -35,14 +41,14 @@
 
         li:nth-child(3):hover div {
             position: absolute;
-            background-color:SkyBlue;
+            background-color: SkyBlue;
             width: 140px;
             display: block;
             z-index: 1;
             padding: 0.5rem;
             margin-left: 2rem;
-           
-           
+
+
         }
 
         // .li:nth-child(3) :hover div {
@@ -71,14 +77,12 @@
             height: 2px;
             transition: 0.3s ease;
             font-family: Times New Roman;
-        
-        } 
-       
+
+        }
+
         li a:hover {
             border-bottom: 2px solid black;
             color: rgb(61, 57, 57);
-           
-         
         }
 
         li {
@@ -89,6 +93,15 @@
     }
 
 }
-@media(max-width:450px){
-   
+
+@media(max-width:450px) {
+    .mainDiv {
+
+        .navUL {
+            display: none;
+            // background-color: red;
+        }
+
+    }
+    
 }
