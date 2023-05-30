@@ -17,7 +17,7 @@
   // background-image: url('../../images/loginBackground1.jpg');
   // height: 35rem;
   // background-repeat: no-repeat;
-  margin: 3rem;
+  // margin: 1rem;
 }
 
 .login-form {
@@ -58,6 +58,10 @@
   border-radius: 25px;
   width: 328px;
   height: 33px;
+}
+.input-items:focus{
+  outline: none;
+  background-color:rgb(151, 196, 221);
 }
 
 .input-items[type="email"]::placeholder {
@@ -133,25 +137,6 @@
 //   /* margin: 0px; */
 // }
 
-.google_btn {
-  box-sizing: border-box;
-  /* position: absolute; */
-  width: 328px;
-  background: #ffffff;
-  border: 1px solid skyblue;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-  /* margin: 1.2rem; */
 
-}
 
-.google_btn:hover {
-  transition: all 0.3s ease;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  // margin-left: 1rem;
-}
+
