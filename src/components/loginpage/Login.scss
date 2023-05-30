@@ -66,8 +66,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  // padding-left: 10px;
-
   color: #929292;
 }
 
@@ -105,6 +103,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  // padding: 2rem;
 }
 
 .sing_btn button {
@@ -114,30 +113,25 @@
   width: 184px;
   font-size: 1.5rem;
   height: 36px;
-  color: #ffffff;
+  color: black;
   border: 1px;
 }
-
-.line_text :first-child div {
-  height: 2px;
-  border-top: 1px solid black;
+.sing_btn button:hover{
+  background-color: rgb(8, 62, 70);
+  color: white;
 }
 
-.line_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 0px; */
-}
+// .line_text :first-child div {
+//   height: 2px;
+//   border-top: 1px solid black;
+// }
 
-.btn_icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* position: relative; */
-  margin-top: 3rem;
-}
+// .line_text {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   /* margin: 0px; */
+// }
 
 .google_btn {
   box-sizing: border-box;
