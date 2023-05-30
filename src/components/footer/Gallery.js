@@ -2,26 +2,35 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { Margin } from '@mui/icons-material';
+import './Gallery.css'
 
 export default function Gallery() {
   return (
-    <ImageList sx={{ width: 500, height: 450 }}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title={item.title}
-            subtitle={<span>by: {item.author}</span>}
-            position="below"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <>
+    <h3 style={{margin:'1rem 0 0 1rem'}}>Gallery:-</h3>
+      <div className='image-galley'>
+
+        <ImageList sx={{ width: 1000, height: 450 }} >
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <ImageListItemBar
+                title={item.title}
+                subtitle={<span>by: {item.author}</span>}
+                position="below"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+      </div>
+    </>
   );
 }
 

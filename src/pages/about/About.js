@@ -57,11 +57,11 @@ function About() {
       <div className={style.surveyer1}>
         <div className={style.surveyer2}>
           <div className={style.surveyerText}>
-            <h4>Great<i> Experience </i>for</h4>
-            <h2>About Skyline
+            {/* <h4>Great<i> Experience </i>for</h4> */}
+            <h2>Skyline
                is a fastest growing company in the field of civil Engineering, in
               Roadways, Railways, Irrigation and heavy Earth moving equipment
-              Machinery, having registered office of Mumbai and Parbhani.</h2>
+              Machinery, having registered office at Mumbai and Parbhani.</h2>
           </div>
         </div>
       </div>

@@ -9,12 +9,23 @@
 .mai_div {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 40rem;
-  
+  // background-image: url('../../images/loginBackground1.jpg');
+  // height: 35rem;
+  // background-repeat: no-repeat;
+  margin: 3rem;
+}
+
+.login-form {
+  margin: 4rem;
+}
+
+.mai_div img {
+  cursor: pointer;
 }
 
 .img_div-singup img {
@@ -71,10 +82,11 @@
   color: #929292;
 }
 
-.input-items[type="email"]{
+.input-items[type="email"] {
   padding-left: 1rem;
 }
-.input-items[type="password"]{
+
+.input-items[type="password"] {
   padding-left: 1rem;
 }
 
@@ -139,9 +151,10 @@
   align-items: center;
   height: 36px;
   /* margin: 1.2rem; */
-  
+
 }
-.google_btn:hover{
+
+.google_btn:hover {
   transition: all 0.3s ease;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);

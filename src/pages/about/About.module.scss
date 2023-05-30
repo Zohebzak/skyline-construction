@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 .heading {
     text-align: center;
 }
 
 //aboutUs & aside image css
 .mainAbout2 img {
-    width: 98.7vw;
+    width: 98.5vw;
 }
 
 .mainAbout3 {
@@ -14,7 +15,7 @@
 .paraImg {
     display: flex;
     align-items: center;
-    margin: 3rem;
+    margin: 1rem;
     flex-direction: row-reverse;
     padding-left: 15px;
     padding-right: 15px;
@@ -50,7 +51,7 @@
 .aboutSubContent2 {
     display: flex;
     align-items: center;
-    margin: 5rem;
+    margin: 3rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
 }
@@ -64,6 +65,8 @@
 .aboutSubContent3 {
     color: white;
     margin: 3rem;
+    font-family: 'Playball', 'cursive';
+   
 }
 
 .surveyer1 {
@@ -81,10 +84,13 @@
     justify-content: center;
     flex-direction: column;
     margin: 3rem;
-    width: 50%;
+    // width: 50%;
     padding-top: 5rem;
     color: white;
     font-weight: bolder;
+    // font-family: 'Playball';
+    font-family:  'cursive'; 
+    line-height: 2rem;
 }
 
 .textFromRight {
@@ -134,8 +140,10 @@
 }
 
 .visionText {
-    margin: 1rem;
-    font-weight: bold;
+    // margin: 1rem;
+    font-weight: bolder;
+    font-family: 'Libre Baskerville', serif;
+    font-size: large;
 }
 
 .visionText h2 {
@@ -156,8 +164,11 @@
 }
 
 .missionText {
-    margin: 1rem;
+    // margin: 1rem;
     font-weight: bold;
+    font-weight: bolder;
+    font-family: 'Libre Baskerville', serif;
+    font-size: large;
 }
 
 .missionText h2 {

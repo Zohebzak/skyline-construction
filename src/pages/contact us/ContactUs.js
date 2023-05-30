@@ -22,7 +22,7 @@ function ContactUs() {
                         <p><i class="fa fa-envelope-o" style={{ color: 'black', height: '10px', width: '2.3rem', fontSize: '1.5rem' }}></i>sample@gmail.com</p>
                     </div>
                     <div className={style.form}>
-                        <form>
+                        <form className='input-form'>
                             <div className={style.inputField}>
                                 <input type={'text'} placeholder={'Your name'} className={style.inputBox} />
                                 <input type={'email'} placeholder={'Email address'} />
@@ -33,7 +33,9 @@ function ContactUs() {
                             </div>
 
                             <textarea cols={40} rows={5} placeholder={'Your messege...'} /><br />
-                            <button onClick={onSubmitClick}>Submit</button>
+                            <div className='form-btn'>
+                                <button onClick={onSubmitClick} className='submit-button'>Submit</button>
+                            </div>
                         </form>
 
                     </div>

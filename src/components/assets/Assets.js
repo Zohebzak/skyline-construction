@@ -1,89 +1,140 @@
 import React from 'react'
-import './Completed.scss'
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-const data =[
+const data = [
     {
         id: 1,
-        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
-        age: 25,
-        phone: 1234567890,
-        accessLevel: "Private",
+        name: "Stone Crusher",
+        age: "01",
+        phone: "roll jack",
+        accessLevel: "200 TPH",
+     
     },
     {
         id: 2,
-        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
-        age: 25,
-        phone: 1234567890,
-        accessLevel: "Private",
+        name: "Ajax Boom Pump",
+        age: "01",
+        phone: "-",
+        accessLevel: "A30Zx",
     },
     {
         id: 3,
-        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
-        age: 25,
-        phone: 1234567890,
-        accessLevel: "Private",
+        name: "Concrete Batching Plant",
+        age: "02 ",
+        phone: "-",
+        accessLevel: "-",
     },
     {
         id: 4,
-        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
-        age: 25,
-        phone: 1234567890,
-        accessLevel: "Private",
+        name: "Auto Level ",
+        age: "03",
+        phone: "-",
+        accessLevel: "-",
     },
     {
         id: 5,
-        name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
-        age: 25,
-        phone: 1234567890,
-        accessLevel: "Private",
+        name: "Water Tanker .",
+        age: "06",
+        phone: "-",
+        accessLevel: "-",
+    }
+    ,
+    {
+        id: 6,
+        name: "Excavator .",
+        age: "02",
+        phone: "Tata Hitachi ",
+        accessLevel: "210 ",
+    },
+    {
+        id: 7,
+        name: "Excavator .",
+        age: "02",
+        phone: "Tata Hitachi ",
+        accessLevel: "120 ",
+    },
+    {
+        id: 8,
+        name: "Excavator .",
+        age: "01",
+        phone: "Tata Hitachi ",
+        accessLevel: "70 ",
+    },
+    {
+        id: 9,
+        name: "Excavator .",
+        age: "02",
+        phone: "Kamatsu ",
+        accessLevel: "220 ",
+    },
+    {
+        id: 10,
+        name: "JCB .",
+        age: "01",
+        phone: "Ka-matsu ",
+        accessLevel: "- ",
+    },
+    {
+        id: 11,
+        name: "JCB .",
+        age: "01",
+        phone: "Ka-matsu ",
+        accessLevel: "- ",
+    },
+    {
+        id: 12,
+        name: "Breaker .",
+        age: "02",
+        phone: "- ",
+        accessLevel: "Tata",
     }
 ]
 
-function Completed() {
+function Assets() {
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode);  
+    const colors = tokens(theme.palette.mode);
     const columns = [
-        { field: "id", headerName: "ID" },
+        { field: "id", headerName: "Sr no" },
         {
-          field: "name",
-          headerName: "sr no",
-          flex: 1,
-          cellClassName: "name-column--cell",
+            field: "name",
+            headerName: "Equipment",
+            flex: 1,
+            cellClassName: "name-column--cell",
+            
         },
         {
-          field: "age",
-          headerName: "Name of Work",
-          type: "number",
-          headerAlign: "left",
-          align: "left",
+            field: "age",
+            headerName: "No of Unit",
+            type: "number",
+            headerAlign: "left",
+            align: "left",
         },
         {
-          field: "phone",
-          headerName: "amount of work (inlacks)",
-          flex: 1,
+            field: "phone",
+            headerName: "Kind of Make",
+            flex: 1,
         },
         {
-          field: "accessLevel",
-          headerName: "Access Level",
-          flex: 1,
-   
+            field: "accessLevel",
+            headerName: "Capacity",
+            flex: 1,
+
         },
         {
-          field: "Action",
-          headerName: "Action",
-          flex: 1,
-        renderCell: function(field){
-return <button>edit</button> 
-        }
+            field: "Location",
+            headerName: "Location",
+            flex: 1,
+
         },
-      ];
+
+
+    ];
     return (
         <>
-            {/* <div className='main-completed'>
-                <h1>Completed project</h1>
-                <p>As a Reputed company we have successfully completed projects with all sefty norms </p>
+            {/* <div className='main-Assets'>
+                <h1>Assets project</h1>
+                <p>As a Reputed company we have successfully Assets projects with all sefty norms </p>
                 <table>
                     <tr>
                         <th>sr no</th>
@@ -192,42 +243,42 @@ return <button>edit</button>
                     </tr>
                 </table>
             </div> */}
-             <Box m="20px">
-      {/* <Header title="TEAM" subtitle="Managing the Team Members" /> */}
-      <Box
-        m="40px 0 0 0"
-        height="75vh"
-        sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
-            borderBottom: "none",
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
-        }}
-      >
-        <DataGrid checkboxSelection rows={data} columns={columns} />
-      </Box>
-    </Box>
+            <Box m="20px">
+                {/* <Header title="TEAM" subtitle="Managing the Team Members" /> */}
+                <Box
+                    m="40px 0 0 0"
+                    height="75vh"
+                    sx={{
+                        "& .MuiDataGrid-root": {
+                            border: "none",
+                        },
+                        "& .MuiDataGrid-cell": {
+                            borderBottom: "none",
+                        },
+                        "& .name-column--cell": {
+                            color: colors.greenAccent[300],
+                        },
+                        "& .MuiDataGrid-columnHeaders": {
+                            backgroundColor: colors.blueAccent[700],
+                            borderBottom: "none",
+                        },
+                        "& .MuiDataGrid-virtualScroller": {
+                            backgroundColor: colors.primary[400],
+                        },
+                        "& .MuiDataGrid-footerContainer": {
+                            borderTop: "none",
+                            backgroundColor: colors.blueAccent[700],
+                        },
+                        "& .MuiCheckbox-root": {
+                            color: `${colors.greenAccent[200]} !important`,
+                        },
+                    }}
+                >
+                    <DataGrid rows={data} columns={columns} />
+                </Box>
+            </Box>
         </>
     )
 }
 
-export default Completed
+export default Assets

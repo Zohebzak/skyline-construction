@@ -15,10 +15,10 @@ function Footer() {
         </div>
         <div className='list-item'>
           <ul className='list'>
-            <li>Career</li>
-            <li>Our Project</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+            <li><Link to={'./career'}>Career</Link></li>
+            <li><Link to={'./completed'}>Our Project</Link></li>
+            <li><Link to={'./about'}>About Us</Link></li>
+            <li><Link to={'./contact'}>Contact Us</Link></li>
             <li><Link to={'./gallery'}>Gallery</Link></li>
             <li><Link to={'/Login'}>login </Link></li>
           </ul>

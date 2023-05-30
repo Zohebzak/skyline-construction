@@ -27,6 +27,7 @@ function OurStrength() {
           <td>-</td>
           <td>5</td>
           <td>Mumbai</td>
+          <button>edit</button>
         </tr>
         <tr>
           <td>2</td>
@@ -35,6 +36,8 @@ function OurStrength() {
           <td>-</td>
           <td>200TPH</td>
           <td>Mumbai</td>
+          <button>edit</button>
+
         </tr>
       </table>
 

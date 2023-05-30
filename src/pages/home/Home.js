@@ -8,7 +8,8 @@ function Home() {
     {url:'./images/image2.jpeg'},
     {url:'./images/image3.jpeg'},
     {url:'./images/image4.jpeg'},
-    {url:'./images/image5.jpeg'}
+    {url:'./images/image5.jpeg'},
+    
   ]
   return (
     <>

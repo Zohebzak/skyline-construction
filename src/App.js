@@ -18,7 +18,11 @@ import OnGoing from './components/projects/OnGoing';
 import AdminRoutes from './components/root/Admin';
 import Gallery from './components/footer/Gallery';
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import Assets from './components/assets/Assets';
 import { ColorModeContext, useMode } from "./theme";
+import Career from './pages/career/Career';
+import Keyperson from './components/Navbar/managment/keyperson/Keyperson';
+
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -29,6 +33,8 @@ function App() {
         <Route element={<AdminRoutes />}>
           <Route path='/Employes' element={<Completed />} />
           <Route path='/admin' element={<OnGoing />} />
+          <Route path='/dashboard' element={<h1>dashbord</h1>} />
+          <Route path='/assets' element={<Assets />} />
         </Route>
 
         <Route element={<Root />}>
@@ -39,9 +45,10 @@ function App() {
           <Route path='/strength' element={<OurStrength />} />
           <Route path='/completed' element={<Completed />} />
           <Route path='/OnGoing' element={<OnGoing />} />
+          <Route path='/keyperson' element={<Keyperson />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/Gallery' element={<Gallery/>} />
-
+          <Route path='/Gallery' element={<Gallery />} />
+          <Route path='/career' element={<Career />} />
 
 
         </Route>
@@ -51,14 +58,14 @@ function App() {
   )
   return (
     <>
-     <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
-      <RouterProvider router={router}>
+        <RouterProvider router={router}>
 
-      </RouterProvider>
+        </RouterProvider>
       </ThemeProvider>
 
-     
+
     </>
   );
 }

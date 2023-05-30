@@ -1,0 +1,30 @@
+.career-text {
+  margin: 3rem;
+  font-family: 'Libre Baskerville', serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.career-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.career-input-field input {
+  margin: 1rem;
+  margin-right: 5rem;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+form label {
+  margin-left: 1rem;
+}
+.btn-div{
+  margin-left: 50%;
+  margin-bottom: 1rem;
+}

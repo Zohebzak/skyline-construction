@@ -70,14 +70,7 @@ function Completed() {
           flex: 1,
    
         },
-        {
-          field: "Action",
-          headerName: "Action",
-          flex: 1,
-        renderCell: function(field){
-return <button>edit</button> 
-        }
-        },
+       
       ];
     return (
         <>
@@ -223,7 +216,7 @@ return <button>edit</button>
           },
         }}
       >
-        <DataGrid checkboxSelection rows={data} columns={columns} />
+        <DataGrid  rows={data} columns={columns} />
       </Box>
     </Box>
         </>

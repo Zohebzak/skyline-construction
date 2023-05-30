@@ -1,5 +1,8 @@
 .main_Strength{
     margin: 3rem;
+    font-family: 'Libre Baskerville', serif;
+    font-size: large;
+    font-weight: bold;
 }
 .main_Strength h2{
     border-bottom: 2px solid skyblue;
@@ -18,4 +21,11 @@ table {
     border: 1px solid white;
     border-collapse: collapse;
     padding: .5rem;
+  }
+  tr button{
+    background-color:  rgba(2, 0, 36, 1);
+    color:  #ffe3a3;
+    width: 3rem;
+    border: 1px solid white;
+    margin-left: 0.4rem;
   }

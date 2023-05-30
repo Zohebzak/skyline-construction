@@ -23,32 +23,38 @@ function Navbar() {
   }, [pathname])
   return (
     <>
-    <div className={style.navBarDiv}>
-      {/* <header style={{ textAlign: 'center' }}>SKYLINE CONSCTRUCTIONS AND ENGENEERS PVT LTD</header> */}
-      <div className={style.mainDiv}>
-        <div className={style.skylineLogo}>
-          <img src={logo} alt='logo' width={"100px"} onClick={() => navigate("/")} />
+      <div className={style.navBarDiv}>
+        {/* <header style={{ textAlign: 'center' }}>SKYLINE CONSCTRUCTIONS AND ENGENEERS PVT LTD</header> */}
+        <div className={style.mainDiv}>
+          <div className={style.skylineLogo}>
+            <img src={logo} alt='logo' width={"100px"} onClick={() => navigate("/")} />
+          </div>
+
+          <ul className={style.navUL}>
+            {/*  */}
+            <li><Link to={'/'}>HOME </Link></li>
+            <li><Link to={'/strength'}>OUR STRENGTH</Link>
+            </li>
+            <li className='DropDown' ><a href='#'>OUR PROJECTS<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></a><div className="drop-content">
+              <Link to={'/completed'}>Completed</Link><br />
+              <Link to={'/OnGoing'}>On Going</Link><br />
+            </div> </li>
+            <li className='mngDropdown'><Link to={'/about'}>MANAGMENT<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></Link><div className='mngDropContent'>
+              <li><Link>About Company</Link></li>
+              <li><Link>Core Value</Link></li>
+              <li><Link to={'./keyperson'}>Key Person</Link></li>
+            </div>
+            </li>
+            <li><Link to={'/about'}>ABOUT US</Link></li>
+            <li>< Link to={'/contact'}>CONTACT US</Link></li>
+          </ul>
+
         </div>
-        
-        <ul className={style.navUL}>
-          {/*  */}
-          <li><Link to={'/'}>HOME </Link></li>
-          <li><Link to={'/strength'}>OUR STRENGTH</Link>
-          </li>
-          <li className='DropDown' ><a href='#'>OUR PROJECTS<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></a><div className="drop-content">
-            <Link to={'/completed'}>Completed</Link><br />
-            <Link to={'/OnGoing'}>On Going</Link><br />
-          </div> </li>
-          <li><Link to={'/about'}>ABOUT US</Link></li>
-          <li>< Link to={'/contact'}>CONTACT US</Link></li>
-        </ul>
-       
+
       </div>
-   
-    </div>
-    <div className="App" id="outer-container">
+      <div className="App" id="outer-container">
         <BurgerButton pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-       
+
       </div>
     </>
   )
