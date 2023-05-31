@@ -23,7 +23,7 @@ function Login() {
     return (
         <>
 
-            <div>
+            <div>   
                 <div className='mai_div'>
                     <div className='login-pic' style={{ marginLeft: '2rem' }}>
                         <img src={loginPic} />
