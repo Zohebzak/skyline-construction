@@ -3,7 +3,12 @@ import './Completed.scss'
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-const data =[
+import { CompleteEvent, deleteEventId, getEventAll } from '../../services/admin.service';
+import KeepMounting from './KeepMounting';
+import Button from '@mui/material/Button';
+
+
+const data = [
     {
         id: 1,
         name: "Construction of Uddhat Barrage across Nira River Taq. Indapur,Dist. Pune.",
@@ -43,35 +48,60 @@ const data =[
 
 function Completed() {
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode);  
+    const colors = tokens(theme.palette.mode);
     const columns = [
         { field: "id", headerName: "ID" },
         {
-          field: "name",
-          headerName: "sr no",
-          flex: 1,
-          cellClassName: "name-column--cell",
+            field: "name",
+            headerName: "sr no",
+            flex: 1,
+            cellClassName: "name-column--cell",
         },
         {
-          field: "age",
-          headerName: "Name of Work",
-          type: "number",
-          headerAlign: "left",
-          align: "left",
+            field: "age",
+            headerName: "Name of Work",
+            type: "number",
+            headerAlign: "left",
+            align: "left",
         },
         {
-          field: "phone",
-          headerName: "amount of work (inlacks)",
-          flex: 1,
+            field: "phone",
+            headerName: "amount of work (inlacks)",
+            flex: 1,
         },
         {
-          field: "accessLevel",
-          headerName: "Access Level",
-          flex: 1,
-   
+            field: "accessLevel",
+            headerName: "Access Level",
+            flex: 1,
+
         },
-       
-      ];
+        {
+            field: "edit",
+            headerName: "Edit",
+            sortable: false,
+            renderCell: (params) => (
+                <Button variant="contained" color="primary">
+                    Edit
+                </Button>
+            ),
+        },
+        {
+            field: "delete",
+            headerName: "Delete",
+            sortable: false,
+            renderCell: (params) => (
+                <Button variant="contained" color="secondary">
+                    Delete
+                </Button>
+            ),
+        },
+
+    ];
+    const [dataRow, setDataRow] = React.useState([])
+    const fetchData = async () => {
+        const data = await getEventAll()
+        setDataRow(data.data.Events);
+    }
     return (
         <>
             {/* <div className='main-completed'>
@@ -185,40 +215,45 @@ function Completed() {
                     </tr>
                 </table>
             </div> */}
-             <Box m="20px">
-      {/* <Header title="TEAM" subtitle="Managing the Team Members" /> */}
-      <Box
-        m="40px 0 0 0"
-        height="75vh"
-        sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
-            borderBottom: "none",
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
-        }}
-      >
-        <DataGrid  rows={data} columns={columns} />
-      </Box>
-    </Box>
+            <div className='addCategoryDiv' style={{ textAlign: 'right', marginTop: '1rem', marginRight: '1.7rem' }}>
+                <div className='addCategoryButton'>
+                    <  KeepMounting refetch={fetchData} />
+                </div>
+            </div>
+            <Box m="20px">
+                {/* <Header title="TEAM" subtitle="Managing the Team Members" /> */}
+                <Box
+                    m="40px 0 0 0"
+                    height="75vh"
+                    sx={{
+                        "& .MuiDataGrid-root": {
+                            border: "none",
+                        },
+                        "& .MuiDataGrid-cell": {
+                            borderBottom: "none",
+                        },
+                        "& .name-column--cell": {
+                            color: colors.greenAccent[300],
+                        },
+                        "& .MuiDataGrid-columnHeaders": {
+                            backgroundColor: colors.blueAccent[700],
+                            borderBottom: "none",
+                        },
+                        "& .MuiDataGrid-virtualScroller": {
+                            backgroundColor: colors.primary[400],
+                        },
+                        "& .MuiDataGrid-footerContainer": {
+                            borderTop: "none",
+                            backgroundColor: colors.blueAccent[700],
+                        },
+                        "& .MuiCheckbox-root": {
+                            color: `${colors.greenAccent[200]} !important`,
+                        },
+                    }}
+                >
+                    <DataGrid rows={data} columns={columns} />
+                </Box>
+            </Box>
         </>
     )
 }

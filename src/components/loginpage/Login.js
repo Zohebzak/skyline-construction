@@ -3,23 +3,36 @@ import "./Login.scss"
 import img from '../../images/SkylineLogo2png.png'
 import { useNavigate } from 'react-router-dom'
 import loginPic from '../../images/our_vision2.jpg'
+import { AdminLoginService } from '../../services/admin.service'
 
 function Login() {
+    const navigate = useNavigate()
+
     // const [isLogin, setIsLogin] = useState(true)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+   
 
-    const handleOnClick = (e) => {
-        e.preventDefault();
-        console.log(email);
-        console.log(password);
-        const payLoad={
-            email:email,
-            password:password
-        }
-        console.log(payLoad);
+    const handleOnClick = async(e) => {
+            e.preventDefault()
+            const data = await AdminLoginService({email,password})
+                console.log(data.data)
+                if(data.data.status === 400){
+               alert("err");
+                }else{
+                  const objString = JSON.stringify(data.data);
+                  localStorage.setItem("user" ,objString)
+                  navigate("/admin")
+                }
+              
+              // const data= await  AdminLoginService()
+            
     }
-    const navigate = useNavigate()
+    //   {
+  //     "email":"Sheraz@gmail.in",
+  //     "password":"Sheraz@123"
+
+  // }
     return (
         <>
 

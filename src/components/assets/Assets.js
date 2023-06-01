@@ -2,6 +2,10 @@ import React from 'react'
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
+import { CompleteEvent, deleteEventId, getEventAll } from '../../services/admin.service';
+import KeepMountedModal from './KeepMountedModal';
+import Button from '@mui/material/Button';
+
 const data = [
     {
         id: 1,
@@ -9,7 +13,7 @@ const data = [
         age: "01",
         phone: "roll jack",
         accessLevel: "200 TPH",
-     
+
     },
     {
         id: 2,
@@ -101,7 +105,7 @@ function Assets() {
             headerName: "Equipment",
             flex: 1,
             cellClassName: "name-column--cell",
-            
+
         },
         {
             field: "age",
@@ -127,9 +131,35 @@ function Assets() {
             flex: 1,
 
         },
+        {
+            field: "edit",
+            headerName: "Edit",
+            sortable: false,
+            renderCell: (params) => (
+                <Button variant="contained" color="primary">
+                    Edit
+                </Button>
+            ),
+        },
+        {
+            field: "delete",
+            headerName: "Delete",
+            sortable: false,
+            renderCell: (params) => (
+                <Button variant="contained" color="secondary">
+                    Delete
+                </Button>
+            ),
+        },
 
 
     ];
+    const [dataRow, setDataRow] = React.useState([])
+
+    const fetchData = async () => {
+        const data = await getEventAll()
+        setDataRow(data.data.Events);
+    }
     return (
         <>
             {/* <div className='main-Assets'>
@@ -243,6 +273,11 @@ function Assets() {
                     </tr>
                 </table>
             </div> */}
+            <div className='addCategoryDiv' style={{ textAlign: 'right', marginTop: '1rem', marginRight: '1.7rem' }}>
+                <div className='addCategoryButton'>
+                    <  KeepMountedModal refetch={fetchData} />
+                </div>
+            </div>
             <Box m="20px">
                 {/* <Header title="TEAM" subtitle="Managing the Team Members" /> */}
                 <Box
