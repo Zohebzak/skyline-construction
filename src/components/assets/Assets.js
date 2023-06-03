@@ -100,13 +100,7 @@ function Assets() {
     const colors = tokens(theme.palette.mode);
     const columns = [
         { field: "id", headerName: "Sr no" ,
-         renderCell: (params) => { 
-            console.log(params , 'column');
-            return(
-            <Button variant="contained" color="primary">
-                Edit
-            </Button>
-        )}, },
+         renderCell: (params) => params._id, },
         {
             field: "name",
             headerName: "Equipment",
@@ -165,6 +159,7 @@ function Assets() {
 
     const fetchData = async () => {
         const data = await getEventAll()
+        console.log("hello");
         setDataRow(data.data.Events);
     }
     useEffect(()=>{

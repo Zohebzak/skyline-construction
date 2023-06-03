@@ -1,0 +1,11 @@
+.aboutCompany{
+    margin: 3rem;
+}
+.aboutCompany h3{
+    border-bottom: 2px solid rgb(55, 191, 241);
+    width: fit-content;
+    color: red;
+}
+.aboutCompany p{
+font-weight: bold;
+}

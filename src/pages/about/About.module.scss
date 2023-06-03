@@ -38,6 +38,7 @@
 .para h3 {
     display: table;
     border-bottom: 2px solid rgb(55, 191, 241);
+    width: fit-content;
 }
 
 //sub main information
@@ -148,7 +149,7 @@
 
 .visionText h2 {
     border-bottom: 2px solid skyblue;
-    width: 6.6rem;
+    width: fit-content;
 }
 
 .mission {
@@ -173,7 +174,7 @@
 
 .missionText h2 {
     border-bottom: 2px solid skyblue;
-    width: 6.6rem;
+    width: fit-content;
 }
 
 @media(max-width:450px) {

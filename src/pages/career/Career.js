@@ -1,7 +1,38 @@
 import React from 'react'
 import './Career.css'
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { useTheme } from '@emotion/react';
+import { useMediaQuery } from '@mui/material';
 
 function Career() {
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme?.breakpoints?.down('sm'))
+    const [data, setData] = React.useState({
+        // firstname: '',
+        // lastname: '',
+        // qulification: '',
+        // date: '',
+        // applyingfor: '',
+        // totalexperience: '',
+        // contactno: '',
+        // currentorginaization: '',
+        // currentprofile: '',
+        // lastsalary: '',
+        // expectedsalary: '',
+        // uploadresume: ''
+
+    })
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log(data);
+        // let helper = e[event.target.value] = event.target.value
+        // return helper
+
+    }
+    const handleChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value })
+    }
     return (
         <>
             <div className='career-main'>
@@ -11,81 +42,56 @@ function Career() {
                         "At our construction company, we believe in nurturing talent and providing a platform for growth. Join our team of dedicated professionals, where you can unleash your potential, contribute to exciting projects, and build a rewarding career in the dynamic world of construction. Whether you're an experienced industry veteran or just starting your journey, we offer diverse opportunities and a supportive environment for you to thrive."</p>
                 </div>
                 <div className='career-form'>
-                    <form>
-                        <div className='career-input-field'>
-                            <div>
-                                <label>First-Name</label>
-                                <input type='text' placeholder='First-Name' />
-                            </div>
-                            <div>
-                                <label>Last-Name</label>
-                                <input type='text' placeholder='Last-Name' />
-                            </div>
+
+                    <Box
+                        component="form"
+                        sx={{
+                            '& .MuiTextField-root': { m: 1, width: '45%' ,height:'3vh'},
+                        }}
+                        style={{
+                            display: "flex", flexDirection: "column", alignItems: 'center', margin: '0',
+                            marginTop: '2rem', gap: '1rem'
+                        }}
+                        noValidate
+                        autoComplete="off"
+                    >
+
+
+                        <div style={{ width: isMobile ? "" : '75%' }}>
+                            <TextField id="outlined-search" name='firstname' onChange={handleChange} value={setData.firstname} label="First Name" type="search" />
+                            <TextField id="outlined-search" name='lastname' onChange={handleChange} value={setData.lastname} label="Last Name" type="search" />
 
                         </div>
-                        <div className='career-input-field'>
-                            <div>
-                                <label>Qulification</label>
-                                <input type='text' placeholder='Qulification' />
-                            </div>
-                            <div>
-                                <label>Date Of Birth</label>
-                                <input type='date' placeholder='Date Of Birth' />
-                            </div>
+                        <div style={{ width: isMobile ? "" : '75%' }}>
+                            <TextField id="outlined-search" name='qulification' onChange={handleChange} value={setData.qulification} label="Qulification" type="search" />
+                            <TextField id="outlined-search" name='date' onChange={handleChange} value={setData.date} label="" type="date" />
 
                         </div>
-                        <div className='career-input-field'>
-                            <div>
-                                <label>Applying For</label>
-                                <input type='text' placeholder='Applying For' />
-                            </div>
-                            <div>
-                                <label>Total years of experience</label>
-                                <input type='text' placeholder='Total years of experience' />
-                            </div>
+                        <div style={{ width: isMobile ? "" : '75%' }}>
+                            <TextField id="outlined-search" name='applyingfor' onChange={handleChange} value={setData.applyingfor} label="Applying for" type="search" />
+                            <TextField id="outlined-search" name='totalexperience' onChange={handleChange} value={setData.totalexperience} label="Total experience" type="search" />
 
                         </div>
-                        <div className='career-input-field'>
-                            <div>
-                                <label>Conatct No</label>
-                                <input type='number' placeholder='Conatct No' />
-                            </div>
-
+                        <div style={{ width: isMobile ? "" : '75%' }}>
+                            <TextField id="outlined-search" name='contactno' onChange={handleChange} value={setData.contactno} label="Conatct No" type="number" />
+                            <TextField id="outlined-search" name='currentorginaization' onChange={handleChange} value={setData.currentorginaization} label="Currrent Orginaization" type="search" />
 
                         </div>
-                        
-                            <div>
-                                <label>Currrent Orginaization</label>
-                                <input type='text' placeholder='Currrent Orginaization' />
-                            </div>
-                            <div>
-                                <label>Current profile</label><br/>
-                                <input type='text' placeholder='Current profile' />
-                            </div>
+                        <div style={{ width: isMobile ? "" : '75%' }}>
+                            <TextField id="outlined-search" name='currentprofile' onChange={handleChange} value={setData.currentprofile} label="Current profile" type="search" />
+                            <TextField id="outlined-search" name='lastsalary' onChange={handleChange} value={setData.lastsalary} label="Last Drawn Salary" type="search" />
 
-                       
-                        
-                            <div>
-                                <label>Last Drawn Salary</label><br/>
-                                <input type='text' placeholder='Last Drawn Salary' />
-                            </div>
-                            <div>
-                                <label>Expected Salary</label><br/>
-                                <input type='text' placeholder='Expected Salary' />
-                            </div>
-
-                      
-                        
-                            <div>
-                                <label>Upload Resume</label><br/>
-                                <input type='file' placeholder='Upload Resume' />
-                            </div>
-
-                        <div className='btn-div'>
-                            <button>Submit</button>
                         </div>
-                    </form>
+                        <div style={{ width: isMobile ? "" : '75%' }}>
+                            <TextField id="outlined-search" name='expectedsalary' onChange={handleChange} value={setData.expectedsalary} label="Expected Salary" type="search" />
+                            <TextField id="outlined-search" name='uploadresume' onChange={handleChange} value={setData.uploadresume} label="" type="file" placeholder='upload resume' />
 
+                        </div>
+                        <div>
+                            <button onClick={handleClick}>Submit</button>
+                        </div>
+
+                    </Box>
                 </div>
             </div>
         </>

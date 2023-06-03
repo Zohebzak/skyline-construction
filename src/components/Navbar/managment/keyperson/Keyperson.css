@@ -1,0 +1,14 @@
+.person-info-main{
+    margin: 1rem;
+}
+.person-info-main h3{
+    border-bottom: 2px solid rgb(55, 191, 241);
+    width: fit-content;
+    color: red;
+}
+.keyperson-details{
+    margin: 2rem;
+}
+.keyperson-details p{
+font-weight: bold;
+}

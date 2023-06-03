@@ -37,15 +37,15 @@ function Footer() {
           <span><i class="fa fa-envelope-o" style={{ color: 'black', fontSize: '20px', paddingRight: '1rem' }} /></span>
           <div className='email-text'>
             <p>Email us :</p>
-            <p>Skyline@gmail.com</p>
+            <p>cmd@skyline.org.in, info@skyline.org.in</p>
           </div>
         </div>
         <div className='phoneno-section'>
           <i class="fa fa-mobile-phone" style={{ color: 'black', fontSize: '30px', paddingRight: '1rem' }} />
           <div className='phone-no'>
             <p>Call us :</p>
-            <p>+91-0000000000</p>
-            <p>+91+0000000000</p>
+            <p>+91- 919028965441</p>
+            <p>+91-919373675211</p>
           </div>
         </div>
       </div>

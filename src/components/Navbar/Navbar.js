@@ -39,10 +39,10 @@ function Navbar() {
               <Link to={'/completed'}>Completed</Link><br />
               <Link to={'/OnGoing'}>On Going</Link><br />
             </div> </li>
-            <li className='mngDropdown'><Link to={'/about'}>MANAGMENT<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></Link><div className='mngDropContent'>
-              <li><Link>About Company</Link></li>
-              <li><Link>Core Value</Link></li>
-              <li><Link to={'./keyperson'}>Key Person</Link></li>
+            <li className='mngDropdown'><Link to={'/about'}>MANAGMENT<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></Link><div className='drop-content'>
+              <Link to={'./AboutCompany'}>About Company</Link><br/>
+              <Link>Core Value</Link><br/>
+              <Link to={'./keyperson'}>Key Person</Link>
             </div>
             </li>
             <li><Link to={'/about'}>ABOUT US</Link></li>

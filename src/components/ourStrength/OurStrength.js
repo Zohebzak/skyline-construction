@@ -1,7 +1,19 @@
 import React from 'react'
 import './OurStrength.scss'
+import { CompleteEvent, deleteEventId, getEventAll } from '../../services/admin.service';
+import { useEffect,useState } from 'react';
 
 function OurStrength() {
+  const [dataRow, setDataRow] = useState([])
+
+  const fetchData = async () => {
+    const data = await getEventAll()
+    console.log(data.data.Events, "data");
+    setDataRow(data.data.Events);
+  }
+  useEffect(() => {
+    fetchData()
+  }, [])
   return (
     <>
       <div className='main_Strength'>
@@ -20,26 +32,25 @@ function OurStrength() {
           <th>Capacity</th>
           <th>Current location</th>
         </tr>
-        <tr>
-          <td>1</td>
-          <td>Ajax Boom pump</td>
-          <td>02</td>
-          <td>-</td>
-          <td>5</td>
-          <td>Mumbai</td>
-          <button>edit</button>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Stone Crusher Plant</td>
-          <td>01 NOS</td>
-          <td>-</td>
-          <td>200TPH</td>
-          <td>Mumbai</td>
-          <button>edit</button>
-
-        </tr>
-      </table>
+        
+        {
+          dataRow.map((item,index)=>{
+            return (
+              
+              <tr>
+              <td>{index + 1}</td>
+              <td>{item.name}</td>
+              <td>{item.noUnits}</td>
+              <td>{item.madeBy}</td>
+              <td>{item.capacity}</td>
+              <td>{item.location}</td>
+    
+            </tr>
+            )
+          })
+        }
+        
+      </table >
 
     </>
   )

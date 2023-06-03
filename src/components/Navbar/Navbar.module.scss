@@ -59,8 +59,7 @@
         // }
 
         li:nth-child(4) div {
-            position: absolute;
-            background-color: black;
+            // position: absolute;
             width: 205px;
             display: none;
 
@@ -69,11 +68,11 @@
         li:nth-child(4):hover div {
             position: absolute;
             background-color: SkyBlue;
-            width: 140px;
+            width: 170px;
             display: block;
             z-index: 1;
             padding: 0.5rem;
-            margin-left: 2rem;
+            // margin-left: 2rem;
             
         }
         .content a {
