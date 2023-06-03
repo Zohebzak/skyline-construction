@@ -23,6 +23,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Career from './pages/career/Career';
 import Keyperson from './components/Navbar/managment/keyperson/Keyperson';
 import AboutCompany from './components/Navbar/managment/keyperson/AboutCompany';
+import Projects from './components/project/Project';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -38,6 +39,7 @@ function App() {
           <Route path='/admin' element={<OnGoing />} />
           <Route path='/dashboard' element={<h1>dashbord</h1>} />
           <Route path='/assets' element={<Assets />} />
+          <Route path='/projects' element={<Projects />} />
         </Route>
         <Route element={<Root />}>
           <Route path='/' element={<Home />} />
