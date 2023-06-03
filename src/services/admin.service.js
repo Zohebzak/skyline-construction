@@ -37,7 +37,7 @@ export const AdminSingService = async (values) => {
     return { error };
   }
 };
-export const getEventByQuery = async (values) => {
+export const getProjectByQuery = async (values) => {
   try {
     return await (
       await axios.get(
