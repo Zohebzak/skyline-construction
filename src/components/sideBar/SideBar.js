@@ -59,6 +59,10 @@ const navItems = [
     text: "Assets",
     icon: <ReceiptLongOutlined />,
   },
+  {
+    text: "projects",
+    icon: <ReceiptLongOutlined />,
+  },
 
   {
     text: "Management",

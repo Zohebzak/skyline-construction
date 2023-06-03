@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Input, InputLabel, TextField } from '@mui/material';
 import './CreateModal.css'
-import { addAssets, addEvent } from '../../services/admin.service';
+import { addAssets } from '../../services/admin.service';
 // import { adminServices } from '../services/admin.services'
 const style = {
     position: 'absolute',

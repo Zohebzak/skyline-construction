@@ -1,7 +1,7 @@
 import axios from "axios";
 import { parse, stringify } from "flatted";
 const config ="https://pleasant-lamb-tunic.cyclic.app" 
-const baseUrl = process.env.REACT_APP_API_URL_LOCAL  || "https://pleasant-lamb-tunic.cyclic.app"
+const baseUrl = process.env.REACT_APP_API_URL_LOCAL  || "http://localhost:5002"
 console.log(`${baseUrl}`,'baseUrl');
 export const postStudentData = async (values) => {
   try {
@@ -49,14 +49,14 @@ export const getEventByQuery = async (values) => {
   }
 };
 
-export const addEvent = async (values) => {
+export const addProject = async (values) => {
   try {
     const storedObj = localStorage.getItem('user');
 
     const token = JSON.parse(storedObj).token;
     console.log(token);
     return await axios.post(
-      `${baseUrl}/api/addEvent`,
+      `${baseUrl}/api/addProject`,
       values,
       {
         headers: { Authorization: token },
@@ -105,6 +105,24 @@ export const getEventAll = async () => {
     try {
     const { data } = await axios.get(
       `${baseUrl}/api/getAssets`,
+      {
+        headers: { Authorization: token },
+      }
+    );
+    return data;
+  } catch (error) {
+    return { error };
+  }
+};
+export const getAllProject = async () => {
+  // console.log(values);
+  const storedObj = localStorage.getItem('user');
+
+  const token = JSON.parse(storedObj).token;
+  console.log(token);
+    try {
+    const { data } = await axios.get(
+      `${baseUrl}/api/getProjects`,
       {
         headers: { Authorization: token },
       }

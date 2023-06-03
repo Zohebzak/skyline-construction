@@ -7,8 +7,8 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Input, InputLabel, TextField } from '@mui/material';
-import './KeepMounting.css'
-// import { addEvent } from '../../services/admin.service';
+import './CreateModal.css'
+import { addAssets, addProject } from '../../services/admin.service';
 // import { adminServices } from '../services/admin.services'
 const style = {
     position: 'absolute',
@@ -26,12 +26,12 @@ const style = {
     justifyContent: 'center'
 };
 
-export default function KeepMounting({ refetch }) {
+export default function KeepMountedModal({ refetch }) {
     const [name, setName] = useState('')
-    const [location, setLocation] = useState('6416bb61115dc8d869fde3e1')
-    const [img, setImg] = useState('')
-    const [date, setDate] = useState('')
-    const [tostMessage, setTostMessage] = useState('')
+    const [Status, setStatus] = useState('Ongoing')
+    const [balanceWork, setBalanceWork] = useState('')
+    const [amount, setAmount] = useState()
+    const [workDone, setWorkDone] = useState('')
     const [response, setResponse] = useState(null)
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -41,29 +41,34 @@ export default function KeepMounting({ refetch }) {
 
     async function getFormData(e) {
         e.preventDefault()
-        const formData = new FormData();
-        formData.append("image", img)
-        formData.append("name", name)
-        formData.append("location", location)
-        formData.append("date", date)
-        // const data = await addEvent(formData).then((res) => {
-        //     setResponse(res)
-        //     console.log("this is status.......", res.status)
-        //     if (res.status === 201 || res.status === 200) {
-        //         notify = () => { toast("Event Added Successfully") }
-        //         notify()
-        //         handleClose()
-        //         refetch()
-        //     } else {
-        //         console.log('something went wrong')
-        //     }
-        // }).catch((error) => {
-        //     console.log("this is an error....", error)
-        //     notify = () => { toast("An Error Occured") }
-        //     notify()
-        // })
-    }
 
+        const payLoad = {
+            name: name,
+            amount: amount,
+            workDone: workDone,
+            balanceWork: balanceWork,
+            Status: Status
+        }
+        const data = await addProject(payLoad).then((res) => {
+            setResponse(res)
+            console.log("this is status.......", res.status)
+            if (res.status === 201 || res.status === 200) {
+                notify = () => { toast("Event Added Successfully") }
+                notify()
+                handleClose()
+                refetch()
+            } else {
+                console.log('something went wrong')
+            }
+        }).catch((error) => {
+            console.log("this is an error....", error)
+            notify = () => { toast("An Error Occured") }
+            notify()
+        })
+    }
+    // if () {
+
+    // }
     return (
         <>
             <div >
@@ -90,25 +95,36 @@ export default function KeepMounting({ refetch }) {
                             justifyContent: 'center'
                         }}>
                             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                                <InputLabel htmlFor='name'>Event Name</InputLabel>
+                                <InputLabel htmlFor='name'>Project Name</InputLabel>
                                 <TextField style={{ padding: "0.2rem" }} onChange={(e) => setName(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
                             </div>
                             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                                <InputLabel htmlFor='name'>Location</InputLabel>
-                                <TextField style={{ padding: "0.2rem" }} onChange={(e) => setLocation(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
+                                <InputLabel htmlFor='name'>Status</InputLabel>
+                                <select onChange={(e) => setStatus(e.target.value)}>
+                                    <option value={"Ongoing"}>Ongoing</option>
+                                    <option value={"Completed"}>Completed</option>
+
+                                </select>
+                                {/* <TextField style={{ padding: "0.2rem" }} onChange={(e) => setStatus(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" /> */}
                             </div>
                             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                                <InputLabel htmlFor='name'>Date</InputLabel>
-                                <TextField style={{ padding: "0.2rem" }} type="date" onChange={(e) => setDate(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
+                                <InputLabel htmlFor='name'>Amount of Work (in Lack)</InputLabel>
+                                <TextField style={{ padding: "0.2rem" }} type="number" onChange={(e) => setAmount(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
                             </div>
+                           {Status === "Ongoing" &&<> <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+                                <InputLabel htmlFor='name'>Balance of Work (in Lack)</InputLabel>
+                                <TextField style={{ padding: "0.2rem" }} type="text" onChange={(e) => setBalanceWork(e.target.value)} id='adminid' vatiant=' outlined' placeholder="" />
+                            </div>
+                            <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+                                <InputLabel htmlFor='name'>Work Done </InputLabel>
+                                <TextField style={{ padding: "0.2rem" }} type="text" onChange={(e) => setWorkDone(e.target.value)} id='adminid' vatiant=' outlined' placeholder="" />
+                            </div></>}
                             {/* <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                                 <InputLabel htmlFor='adminid'>Admin Id</InputLabel>
                                 <TextField onChange={(e) => setAdminId(e.target.value)} value={adminid} required id='name' vatiant=' outlined' placeholder="" />
                             </div> */}
-                            <Button className='imageUpload' variant="contained" component="label">
-                                Upload File
-                                <Input className='imgInput' onChange={(e) => setImg(e.target.files[0])} type="file" hidden />
-                            </Button>
+                            {/* Made BY  */}
+                            {/* <Input className='imgInput' onChange={(e) => setMadeBY(e.target.value)} type="text"  /> */}
                             <Button
                                 variant="contained"
                                 color="primary"
