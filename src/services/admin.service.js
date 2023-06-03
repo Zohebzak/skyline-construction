@@ -1,5 +1,6 @@
 import axios from "axios";
 import { parse, stringify } from "flatted";
+const config ="https://pleasant-lamb-tunic.cyclic.app" 
 const baseUrl = process.env.REACT_APP_API_URL_LOCAL  || "https://pleasant-lamb-tunic.cyclic.app"
 console.log(`${baseUrl}`,'baseUrl');
 export const postStudentData = async (values) => {
@@ -65,6 +66,23 @@ export const addEvent = async (values) => {
     return { error };
   }
 };
+export const addAssets = async (values) => {
+  try {
+    const storedObj = localStorage.getItem('user');
+
+    const token = JSON.parse(storedObj).token;
+    console.log(token);
+    return await axios.post(
+      `${baseUrl}/api/addAsset`,
+      values,
+      {
+        headers: { Authorization: token },
+      }
+    );
+  } catch (error) {
+    return { error };
+  }
+};
 export const RegistrationMember = async (values) => {
   try {
 
@@ -86,7 +104,7 @@ export const getEventAll = async () => {
   console.log(token);
     try {
     const { data } = await axios.get(
-      `${baseUrl}/api/getEvents`,
+      `${baseUrl}/api/getAssets`,
       {
         headers: { Authorization: token },
       }

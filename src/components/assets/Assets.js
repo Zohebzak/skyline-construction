@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
@@ -99,7 +99,14 @@ function Assets() {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const columns = [
-        { field: "id", headerName: "Sr no" },
+        { field: "id", headerName: "Sr no" ,
+         renderCell: (params) => { 
+            console.log(params , 'column');
+            return(
+            <Button variant="contained" color="primary">
+                Edit
+            </Button>
+        )}, },
         {
             field: "name",
             headerName: "Equipment",
@@ -108,25 +115,25 @@ function Assets() {
 
         },
         {
-            field: "age",
+            field: "noUnits",
             headerName: "No of Unit",
             type: "number",
             headerAlign: "left",
             align: "left",
         },
         {
-            field: "phone",
+            field: "madeBy",
             headerName: "Kind of Make",
             flex: 1,
         },
         {
-            field: "accessLevel",
+            field: "capacity",
             headerName: "Capacity",
             flex: 1,
 
         },
         {
-            field: "Location",
+            field: "location",
             headerName: "Location",
             flex: 1,
 
@@ -160,6 +167,9 @@ function Assets() {
         const data = await getEventAll()
         setDataRow(data.data.Events);
     }
+    useEffect(()=>{
+        fetchData()
+    },[])
     return (
         <>
             {/* <div className='main-Assets'>
@@ -309,7 +319,7 @@ function Assets() {
                         },
                     }}
                 >
-                    <DataGrid rows={data} columns={columns} />
+                    <DataGrid rows={dataRow}  columns={columns}  getRowId={(row) => row._id }/>
                 </Box>
             </Box>
         </>

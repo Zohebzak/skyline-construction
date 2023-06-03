@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Input, InputLabel, TextField } from '@mui/material';
 import './CreateModal.css'
-import { addEvent } from '../../services/admin.service';
+import { addAssets, addEvent } from '../../services/admin.service';
 // import { adminServices } from '../services/admin.services'
 const style = {
     position: 'absolute',
@@ -29,9 +29,9 @@ const style = {
 export default function KeepMountedModal({ refetch }) {
     const [name, setName] = useState('')
     const [location, setLocation] = useState('6416bb61115dc8d869fde3e1')
-    const [img, setImg] = useState('')
-    const [date, setDate] = useState('')
-    const [tostMessage, setTostMessage] = useState('')
+    const [madeBy, setMadeBY] = useState('')
+    const [unit, setUnit] = useState()
+    const [capacity, setCapacity] = useState('')
     const [response, setResponse] = useState(null)
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -41,12 +41,19 @@ export default function KeepMountedModal({ refetch }) {
 
     async function getFormData(e) {
         e.preventDefault()
-        const formData = new FormData();
-        formData.append("image", img)
-        formData.append("name", name)
-        formData.append("location", location)
-        formData.append("date", date)
-        const data = await addEvent(formData).then((res) => {
+        // const formData = new FormData();
+        // formData.append("image", img)
+        // formData.append("name", name)
+        // formData.append("location", location)
+        // formData.append("date", date)
+        const  payLoad = {
+            name: name,
+            noUnits:unit,
+            madeBy:madeBy,
+            capacity:capacity,
+            location:location
+        }
+        const data = await addAssets(payLoad).then((res) => {
             setResponse(res)
             console.log("this is status.......", res.status)
             if (res.status === 201 || res.status === 200) {
@@ -98,17 +105,23 @@ export default function KeepMountedModal({ refetch }) {
                                 <TextField style={{ padding: "0.2rem" }} onChange={(e) => setLocation(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
                             </div>
                             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                                <InputLabel htmlFor='name'>Date</InputLabel>
-                                <TextField style={{ padding: "0.2rem" }} type="date" onChange={(e) => setDate(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
+                                <InputLabel htmlFor='name'>No Unit</InputLabel>
+                                <TextField style={{ padding: "0.2rem" }} type="number" onChange={(e) => setUnit(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
+                            </div>
+                            <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+                                <InputLabel htmlFor='name'>Made By</InputLabel>
+                                <TextField style={{ padding: "0.2rem" }} type="text" onChange={(e) => setMadeBY(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
+                            </div>
+                            <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+                                <InputLabel htmlFor='name'>Capacity</InputLabel>
+                                <TextField style={{ padding: "0.2rem" }} type="text" onChange={(e) => setCapacity(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" />
                             </div>
                             {/* <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                                 <InputLabel htmlFor='adminid'>Admin Id</InputLabel>
                                 <TextField onChange={(e) => setAdminId(e.target.value)} value={adminid} required id='name' vatiant=' outlined' placeholder="" />
                             </div> */}
-                            <Button className='imageUpload' variant="contained" component="label">
-                                Upload File
-                                <Input className='imgInput' onChange={(e) => setImg(e.target.files[0])} type="file" hidden />
-                            </Button>
+                                {/* Made BY  */}
+                                {/* <Input className='imgInput' onChange={(e) => setMadeBY(e.target.value)} type="text"  /> */}
                             <Button
                                 variant="contained"
                                 color="primary"
