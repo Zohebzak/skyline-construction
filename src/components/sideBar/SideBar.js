@@ -64,7 +64,7 @@ const navItems = [
     icon: <ReceiptLongOutlined />,
   },
   {
-    text: "Gallery",
+    text: "AddGallery",
     icon: <ReceiptLongOutlined />,
   },
 

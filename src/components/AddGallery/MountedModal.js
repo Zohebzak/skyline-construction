@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Input, InputLabel, TextField } from '@mui/material';
 import './AddGallery.css'
-import { addAssets } from '../../services/admin.service';
+import { AddGallery, addAssets } from '../../services/admin.service';
 // import { adminServices } from '../services/admin.services'
 const style = {
     position: 'absolute',
@@ -27,13 +27,10 @@ const style = {
 };
 
 export default function MountedModal({ refetch }) {
-    const [name, setName] = useState('')
-    const [location, setLocation] = useState('6416bb61115dc8d869fde3e1')
-    const [madeBy, setMadeBY] = useState('')
-    const [unit, setUnit] = useState()
-    const [capacity, setCapacity] = useState('')
-    const [response, setResponse] = useState(null)
+    const [title, setTitle] = useState('')
     const [open, setOpen] = useState(false);
+    const [img, setImg] = useState(false);
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     let notify
@@ -41,21 +38,12 @@ export default function MountedModal({ refetch }) {
 
     async function getFormData(e) {
         e.preventDefault()
-        // const formData = new FormData();
-        // formData.append("image", img)
-        // formData.append("name", name)
-        // formData.append("location", location)
-        // formData.append("date", date)
-        const  payLoad = {
-            name: name,
-            noUnits:unit,
-            madeBy:madeBy,
-            capacity:capacity,
-            location:location
-        }
-        const data = await addAssets(payLoad).then((res) => {
-            setResponse(res)
-            console.log("this is status.......", res.status)
+        const formData = new FormData();
+        formData.append("image", img)
+        formData.append("title", title)
+   
+  
+        const data = await AddGallery(formData).then((res) => {
             if (res.status === 201 || res.status === 200) {
                 notify = () => { toast("Event Added Successfully") }
                 notify()
@@ -98,7 +86,8 @@ export default function MountedModal({ refetch }) {
                         }}>
                             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                                 <InputLabel htmlFor='name'>Event Image</InputLabel>
-                                <TextField style={{ padding: "0.2rem" }} onChange={(e) => setName(e.target.value)} required id='adminid' vatiant=' outlined' placeholder="" type='file' />
+                                <TextField style={{ padding: "0.2rem" }} onChange={(e) => setTitle(e.target.value)} required vatiant=' outlined' placeholder="" type='text' />
+                                <TextField style={{ padding: "0.2rem" }} onChange={(e) => setImg(e.target.files[0])} required id='adminid' vatiant=' outlined' placeholder="" type='file' />
                             </div>
                            
                            

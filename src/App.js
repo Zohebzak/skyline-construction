@@ -41,7 +41,7 @@ function App() {
           <Route path='/dashboard' element={<h1>dashbord</h1>} />
           <Route path='/assets' element={<Assets />} />
           <Route path='/projects' element={<Projects />} />
-          <Route path='/gallery' element={<AddGallery />} />
+          <Route path='/AddGallery' element={<AddGallery />} />
         </Route>
         <Route element={<Root />}>
           <Route path='/' element={<Home />} />

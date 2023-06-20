@@ -2,7 +2,6 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Margin } from '@mui/icons-material';
 import './Gallery.css'
 
 export default function Gallery() {
@@ -20,9 +19,9 @@ export default function Gallery() {
                 alt={item.title}
                 loading="lazy"
               />
+
               <ImageListItemBar
                 title={item.title}
-                subtitle={<span>by: {item.author}</span>}
                 position="below"
               />
             </ImageListItem>

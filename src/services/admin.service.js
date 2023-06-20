@@ -1,8 +1,7 @@
 import axios from "axios";
 import { parse, stringify } from "flatted";
 const config ="https://pleasant-lamb-tunic.cyclic.app" 
-const baseUrl = process.env.REACT_APP_API_URL_LOCAL  || config
-console.log(`${baseUrl}`,'baseUrl');
+const baseUrl ="http://localhost:5002" 
 
 export const postStudentData = async (values) => {
   try {
@@ -85,6 +84,23 @@ export const addAssets = async (values) => {
     return { error };
   }
 };
+export const AddGallery = async (values) => {
+  try {
+    const storedObj = localStorage.getItem('user');
+
+    const token = JSON.parse(storedObj).token;
+    console.log(token);
+    return await axios.post(
+      `${baseUrl}/api/addGallery`,
+      values,
+      {
+        headers: { Authorization: token },
+      }
+    );
+  } catch (error) {
+    return { error };
+  }
+};
 export const RegistrationMember = async (values) => {
   try {
 
@@ -107,6 +123,23 @@ export const getEventAll = async () => {
     try {
     const { data } = await axios.get(
       `${baseUrl}/api/getAssets`,
+      {
+        headers: { Authorization: token },
+      }
+    );
+    return data;
+  } catch (error) {
+    return { error };
+  }
+};
+export const getAllGalery = async () => {
+  // console.log(values);
+  const storedObj = localStorage.getItem('user');
+
+  const token = JSON.parse(storedObj).token;
+    try {
+    const { data } = await axios.get(
+      `${baseUrl}/api/getGallery`,
       {
         headers: { Authorization: token },
       }
