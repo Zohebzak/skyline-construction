@@ -1,31 +1,40 @@
-.main_Strength{
-    margin: 3rem;
-    font-family: 'Libre Baskerville', serif;
-    font-size: large;
-    font-weight: bold;
-}
-.main_Strength h2{
-    border-bottom: 2px solid skyblue;
-    width: fit-content;
+.main_Strength {
+  margin: 3rem;
+  font-family: 'Libre Baskerville', serif;
+  font-size: large;
+  font-weight: bold;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 95%;
-    background-color: rgba(2, 0, 36, 1);
-    color: #ffe3a3;
-    margin: 1rem;
-  }
-  table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
-    padding: .5rem;
-  }
-  tr button{
-    background-color:  rgba(2, 0, 36, 1);
-    color:  #ffe3a3;
-    width: 3rem;
-    border: 1px solid white;
-    margin-left: 0.4rem;
-  }
+.main_Strength h2 {
+  border-bottom: 2px solid skyblue;
+  width: fit-content;
+}
+
+// table {
+//   font-family: arial, sans-serif;
+//   border-collapse: collapse;
+//   width: 95%;
+//   background-color: rgba(2, 0, 36, 1);
+//   color: #ffe3a3;
+//   margin: 1rem;
+// }
+
+// table,
+// th,
+// td {
+//   border: 1px solid white;
+//   border-collapse: collapse;
+//   padding: .5rem;
+// }
+
+// tr button {
+//   background-color: rgba(2, 0, 36, 1);
+//   color: #ffe3a3;
+//   width: 3rem;
+//   border: 1px solid white;
+//   margin-left: 0.4rem;
+// }
+
+@media(max-width:600px) {
+
+}

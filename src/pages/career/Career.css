@@ -7,11 +7,8 @@
 
 /* .career-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  margin: 1rem;
 } */
 
 .career-input-field input {
@@ -24,5 +21,9 @@
 
 .btn-div{
   margin-left: 50%;
+  margin-bottom: 1rem;
+}
+.career-btn{
+  margin: 1rem;
   margin-bottom: 1rem;
 }

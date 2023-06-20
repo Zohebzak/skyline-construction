@@ -9,11 +9,12 @@
 .mai_div {
   text-align: center;
   display: flex;
+  justify-content: center;
   // flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40rem;
+  // height: 40rem;
   // background-image: url('../../images/loginBackground1.jpg');
   // height: 35rem;
   // background-repeat: no-repeat;
@@ -59,9 +60,10 @@
   width: 328px;
   height: 33px;
 }
-.input-items:focus{
+
+.input-items:focus {
   outline: none;
-  background-color:rgb(151, 196, 221);
+  background-color: rgb(151, 196, 221);
 }
 
 .input-items[type="email"]::placeholder {
@@ -120,7 +122,8 @@
   color: black;
   border: 1px;
 }
-.sing_btn button:hover{
+
+.sing_btn button:hover {
   background-color: rgb(8, 62, 70);
   color: white;
 }
@@ -137,6 +140,12 @@
 //   /* margin: 0px; */
 // }
 
-
-
-
+@media(max-width:600px) {
+  .login-pic {
+    display: none;
+  }
+  .login-form {
+    margin: 4rem;
+    width: 15rem;
+  }
+}

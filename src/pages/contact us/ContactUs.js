@@ -37,7 +37,6 @@ function ContactUs() {
                                 <button onClick={onSubmitClick} className='submit-button'>Submit</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
 

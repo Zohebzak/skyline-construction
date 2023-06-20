@@ -24,6 +24,7 @@ import Career from './pages/career/Career';
 import Keyperson from './components/Navbar/managment/keyperson/Keyperson';
 import AboutCompany from './components/Navbar/managment/keyperson/AboutCompany';
 import Projects from './components/project/Project';
+import AddGallery from './components/AddGallery/AddGallery';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -40,6 +41,7 @@ function App() {
           <Route path='/dashboard' element={<h1>dashbord</h1>} />
           <Route path='/assets' element={<Assets />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/gallery' element={<AddGallery />} />
         </Route>
         <Route element={<Root />}>
           <Route path='/' element={<Home />} />

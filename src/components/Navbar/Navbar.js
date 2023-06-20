@@ -7,13 +7,13 @@ import { useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 // import Hamburger from 'hamburger-react'
 import { useState } from 'react'
-import BurgerButton from '../BurgerButton'
+import { BurgurButton } from '../BurgurBatan'
+import { useMediaQuery } from '@mui/material'
 
 
 
 function Navbar() {
-  // const [isOpen, setOpen] = useState(false)
-
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const { pathname } = useLocation()
   const navigate = useNavigate()
   useEffect(() => {
@@ -25,6 +25,7 @@ function Navbar() {
     <>
       <div className={style.navBarDiv}>
         {/* <header style={{ textAlign: 'center' }}>SKYLINE CONSCTRUCTIONS AND ENGENEERS PVT LTD</header> */}
+
         <div className={style.mainDiv}>
           <div className={style.skylineLogo}>
             <img src={logo} alt='logo' width={"100px"} onClick={() => navigate("/")} />
@@ -40,22 +41,22 @@ function Navbar() {
               <Link to={'/OnGoing'}>On Going</Link><br />
             </div> </li>
             <li className='mngDropdown'><Link to={'/about'}>MANAGMENT<span><svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M14 20l10 10 10-10z" /><path d="M0 0h48v48h-48z" fill="none" /></svg></span></Link><div className='drop-content'>
-              <Link to={'./AboutCompany'}>About Company</Link><br/>
-              <Link>Core Value</Link><br/>
+              <Link to={'./AboutCompany'}>About Company</Link><br />
+              <Link>Core Value</Link><br />
               <Link to={'./keyperson'}>Key Person</Link>
             </div>
             </li>
             <li><Link to={'/about'}>ABOUT US</Link></li>
             <li>< Link to={'/contact'}>CONTACT US</Link></li>
           </ul>
-
+          {isMobile && <BurgurButton />}
         </div>
 
       </div>
-      <div className="App" id="outer-container">
+      {/* <div className="App" id="outer-container">
         <BurgerButton pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
 
-      </div>
+      </div> */}
     </>
   )
 }

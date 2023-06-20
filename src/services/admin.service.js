@@ -1,8 +1,9 @@
 import axios from "axios";
 import { parse, stringify } from "flatted";
 const config ="https://pleasant-lamb-tunic.cyclic.app" 
-const baseUrl = process.env.REACT_APP_API_URL_LOCAL  || "http://localhost:5002"
+const baseUrl = config  || "http://localhost:5002"
 console.log(`${baseUrl}`,'baseUrl');
+
 export const postStudentData = async (values) => {
   try {
     return await axios.post(
@@ -13,6 +14,7 @@ export const postStudentData = async (values) => {
     return { error };
   }
 };
+
 export const AdminLoginService = async (values) => {
   try {
     return await (

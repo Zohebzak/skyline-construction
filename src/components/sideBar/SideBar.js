@@ -1,5 +1,5 @@
 import React from "react";
-
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import {
   Box,
   Divider,
@@ -63,6 +63,10 @@ const navItems = [
     text: "projects",
     icon: <ReceiptLongOutlined />,
   },
+  {
+    text: "Gallery",
+    icon: <ReceiptLongOutlined />,
+  },
 
   {
     text: "Management",
@@ -84,6 +88,10 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.mode);
+  const handleClick = () => {
+    console.log('click');
+    setIsSidebarOpen(true)
+  }
 
   useEffect(() => {
     setActive(pathname.substring(1));
@@ -91,6 +99,7 @@ const Sidebar = () => {
 
   return (
     <Box component="nav">
+        <ArrowForwardIcon onClick={handleClick} style={{margin:"2rem"}}/>
       {isSidebarOpen && (
         <Drawer
           open={isSidebarOpen}
@@ -118,7 +127,7 @@ const Sidebar = () => {
                   </Typography>
                 </Box>
                 {!isNonMobile && (
-                  <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                  <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)} style={{color:"#ffe3a3"}}>
                     <ChevronLeft />
                   </IconButton>
                 )}
@@ -128,7 +137,7 @@ const Sidebar = () => {
               {navItems.map(({ text, icon }) => {
                 if (!icon) {
                   return (
-                    <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
+                    <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem"}}>
                       {text}
                     </Typography>
                   );
@@ -185,7 +194,7 @@ const Sidebar = () => {
                   fontSize="0.9rem"
                   sx={{ color: colors.secondary[100] }}
                 >
-                 Nerraj
+                 Airaj Siddiqui
                 </Typography>
                 <Typography
                   fontSize="0.8rem"
